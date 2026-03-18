@@ -1,0 +1,24 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-17_16-01-44",
+            "content": "@@ -141,17 +141,16 @@\n .Scanln(\n-&\n animais%5B\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-03-17_16-02-05",
+            "content": "@@ -138,16 +138,18 @@\n fmt.Scan\n+ln\n (&animai\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-03-17_16-10-05",
+            "content": "@@ -52,20 +52,8 @@\n int%0A\n-%09count := 0%0A\n %09fmt\n@@ -66,16 +66,16 @@\n n(&qtd)%0A\n+\n %09animais\n@@ -163,783 +163,28 @@\n %0A%09%7D%0A\n-%0A\n %09f\n-or ind, _ := range animais %7B%0A%09%09if ind == 0 %7B%0A%09%09%09if animais%5Bind%5D %3C 0 && animais%5Bind+1%5D %3E 0 %7B%0A%09%09%09%09animais%5Bind%5D = 0%0A%09%09%09%09animais%5Bind+1%5D = 0%0A%09%09%09%09count++%0A%09%09%09%7D else if animais%5Bind%5D %3E 0 && animais%5Bind+1%5D %3C 0 %7B%0A%09%09%09%09animais%5Bind%5D = 0%0A%09%09%09%09animais%5Bind+1%5D = 0%0A%09%09%09%09count++%0A%09%09%09%7D%0A%09%09%7D else if ind == len(animais)-1 %7B%0A%09%09%09if animais%5Bind%5D %3E 0 && animais%5Bind-1%5D %3C 0 %7B%0A%09%09%09%09animais%5Bind%5D = 0%0A%09%09%09%09animais%5Bind-1%5D = 0%0A%09%09%09%09count++%0A%09%09%09%7D else if animais%5Bind%5D %3C 0 && animais%5Bind-1%5D %3E 0 %7B%0A%09%09%09%09animais%5Bind%5D = 0%0A%09%09%09%09animais%5Bind-1%5D = 0%0A%09%09%09%09count++%0A%09%09%09%7D%0A%09%09%7D else %7B%0A%09%09%09if animais%5Bind%5D %3C 0 && animais%5Bind+1%5D %3E 0 %7B%0A%09%09%09%09animais%5Bind%5D = 0%0A%09%09%09%09animais%5Bind+1%5D = 0%0A%09%09%09%09count++%0A%09%09%09%7D else if animais%5Bind%5D %3E 0 && animais%5Bind+1%5D %3C 0 %7B%0A%09%09%09%09animais%5Bind%5D = 0%0A%09%09%09%09animais%5Bind+1%5D = 0%0A%09%09%09%09count++%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A%09fmt.Println(count\n+mt.Println(animais\n )%0A%7D%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-03-17_16-29-52",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar qtd int\n\tcount := 0\n\tfmt.Scanln(&qtd)\n\tanimais := make([]int, qtd)\n\tfor index, _ := range animais {\n\t\tfmt.Scan(&animais[index])\n\t}\n\n\tfor ind, _ := range animais {\n\t\tif ind == 0 {\n\t\t\tif animais[ind] < 0 && animais[ind+1] > 0 {\n\t\t\t\tanimais[ind] = 0\n\t\t\t\tanimais[ind+1] = 0\n\t\t\t\tcount++\n\t\t\t} else if animais[ind] > 0 && animais[ind+1] < 0 {\n\t\t\t\tanimais[ind] = 0\n\t\t\t\tanimais[ind+1] = 0\n\t\t\t\tcount++\n\t\t\t}\n\t\t} else if ind == len(animais)-1 {\n\t\t\tif animais[ind] > 0 && animais[ind-1] < 0 {\n\t\t\t\tanimais[ind] = 0\n\t\t\t\tanimais[ind-1] = 0\n\t\t\t\tcount++\n\t\t\t} else if animais[ind] < 0 && animais[ind-1] > 0 {\n\t\t\t\tanimais[ind] = 0\n\t\t\t\tanimais[ind-1] = 0\n\t\t\t\tcount++\n\t\t\t}\n\t\t} else {\n\t\t\tif animais[ind] < 0 && animais[ind+1] > 0 {\n\t\t\t\tanimais[ind] = 0\n\t\t\t\tanimais[ind+1] = 0\n\t\t\t\tcount++\n\t\t\t} else if animais[ind] > 0 && animais[ind+1] < 0 {\n\t\t\t\tanimais[ind] = 0\n\t\t\t\tanimais[ind+1] = 0\n\t\t\t\tcount++\n\t\t\t}\n\t\t}\n\t}\n\n\tfmt.Println(count)\n}\n",
+            "lines": "49"
+        }
+    ]
+}

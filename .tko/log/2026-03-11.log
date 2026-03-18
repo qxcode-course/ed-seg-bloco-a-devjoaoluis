@@ -1,0 +1,32 @@
+2026-03-11 21:20:09, MOVE, v:1, k:ed@pintando, mode:DOWN
+2026-03-11 21:20:09, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-11 21:20:45, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-03-11 21:20:47, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-11 21:31:08, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-03-11 21:31:12, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-11 21:31:16, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-03-11 21:31:23, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-03-11 21:31:25, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-03-11 21:31:27, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-11 21:31:32, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-03-11 21:36:07, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-11 21:36:10, EXEC, v:1, k:ed@pintando, mode:FULL, size:13, fail:COMP
+2026-03-11 21:36:24, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-03-11 21:36:28, MOVE, v:1, k:ed@pintando, mode:PICK
+2026-03-11 21:36:30, EXEC, v:1, k:ed@pintando, mode:FULL, fail:COMP
+2026-03-11 21:37:25, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:13
+2026-03-11 21:38:15, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:14
+2026-03-11 21:38:41, EXEC, v:1, k:ed@pintando, mode:FULL, rate:0, size:17
+2026-03-11 21:39:09, EXEC, v:1, k:ed@pintando, mode:FULL, rate:100, size:17
+2026-03-11 21:40:01, MOVE, v:1, k:ed@pintando, mode:BACK
+2026-03-11 21:40:16, MOVE, v:1, k:ed@mumia, mode:DOWN
+2026-03-11 21:40:17, MOVE, v:1, k:ed@mumia, mode:PICK
+2026-03-11 21:57:15, EXEC, v:1, k:ed@mumia, mode:FULL, rate:0, size:19
+2026-03-11 21:57:25, EXEC, v:1, k:ed@mumia, mode:FULL, rate:100, size:19
+2026-03-11 21:57:27, MOVE, v:1, k:ed@mumia, mode:BACK
+2026-03-11 21:57:30, MOVE, v:1, k:ed@fuga, mode:DOWN
+2026-03-11 21:57:30, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-11 21:57:40, MOVE, v:1, k:ed@fuga, mode:BACK
+2026-03-11 21:58:16, MOVE, v:1, k:ed@fuga, mode:PICK
+2026-03-11 22:37:42, EXEC, v:1, k:ed@fuga, mode:FULL, rate:0, size:5
+2026-03-11 22:37:50, MOVE, v:1, k:ed@fuga, mode:BACK

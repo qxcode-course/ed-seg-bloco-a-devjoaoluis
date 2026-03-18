@@ -1,0 +1,59 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-16_16-16-34",
+            "content": "@@ -10,26 +10,32 @@\n ain%0A\n-%0A\n import \n+ \n (%0A\n-%09\n+    \n %22fmt%22%0A\n-%09\n+    \n %22mat\n@@ -39,17 +39,16 @@\n math%22%0A)%0A\n-%0A\n func mai\n@@ -53,17 +53,20 @@\n ain() %7B%0A\n-%09\n+    \n var roda\n@@ -74,18 +74,22 @@\n as int32\n-%0A%09\n+ %0A    \n vencedor\n@@ -98,17 +98,20 @@\n = 99999%0A\n-%09\n+    \n index :=\n@@ -117,28 +117,33 @@\n = 0%0A\n-%09\n+    \n for \n-_\n+ind\n , num\n- :=\n  range\n+ :=\n  rod\n@@ -149,18 +149,24 @@\n dadas %7B%0A\n-%09%09\n+        \n a, b := \n@@ -167,18 +167,24 @@\n  b := 0%0A\n-%09%09\n+        \n fmt.Scan\n@@ -190,18 +190,24 @@\n nln(&a)%0A\n-%09%09\n+        \n fmt.Scan\n@@ -213,18 +213,24 @@\n nln(&b)%0A\n-%09%09\n+        \n pontos :\n@@ -237,35 +237,46 @@\n = 0%0A\n-%09%09\n+        \n if a\n- %3C \n+%3C\n 10 %7C%7C b\n- %3C \n+%3C\n 10 %7B%0A\n-%09%09%09\n+            \n fmt.\n@@ -306,39 +306,62 @@\n o%22)%0A\n-%09%09%09break%0A%09%09%7D else %7B%0A%09%09%09\n+            break%0A        %7D else %7B%0A            \n pontos \n-:\n = ma\n@@ -372,21 +372,31 @@\n bs(a\n- - b)%0A%09%09%7D%0A%0A%09%09\n+-b)%0A        %7D%0A%0A        \n if p\n@@ -404,11 +404,9 @@\n ntos\n- %3C \n+%3C\n venc\n@@ -416,31 +416,52 @@\n r %7B%0A\n-%09%09%09index = num%0A%09%09%7D%0A%09%7D%0A%09\n+            index = ind%0A        %7D%0A    %7D%0A    \n fmt.\n@@ -476,10 +476,16 @@\n index)%0A%0A\n+    %0A%0A\n %7D%0A\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-16_16-19-08",
+            "content": "@@ -89,32 +89,28 @@\n 9999\n-.0%0A%09var \n+%0A%09\n index \n-int32\n+:= 0\n %0A%09for\n+ _,\n  num\n@@ -132,24 +132,18 @@\n as %7B%0A%09%09a\n+,\n  \n-:= 0%0A%09%09\n b := 0%0A%09\n@@ -175,16 +175,30 @@\n nln(&b)%0A\n+%09%09pontos := 0%0A\n %09%09if a %3C\n@@ -263,37 +263,61 @@\n %0A%09%09%7D\n-%0A%0A%09%09if math.Abs(float64(a-b))\n+ else %7B%0A%09%09%09pontos := math.Abs(a - b)%0A%09%09%7D%0A%0A%09%09if pontos\n  %3C v\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-16_16-27-35",
+            "content": "@@ -165,13 +165,28 @@\n Scan\n+ln\n (&a\n-, \n+)%0A%09%09fmt.Scanln(\n &b)%0A\n@@ -256,16 +256,17 @@\n eak%0A%09%09%7D%0A\n+%0A\n %09%09if mat\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-16_16-28-48",
+            "content": "@@ -244,49 +244,8 @@\n %0A%09%09%7D\n-%0A%0A%09%09fmt.Println(math.Abs(float64(a - b)))\n %0A%09%09i\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-16_16-30-36",
+            "content": "@@ -71,30 +71,8 @@\n t32%0A\n-%09fmt.Scanln(&rodadas)%0A\n %09ven\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-16_16-31-06",
+            "content": "@@ -223,16 +223,47 @@\n %0A%09%09%09\n-continue\n+fmt.Println(%22desclassificado%22)%0A%09%09%09break\n %0A%09%09%7D\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-16_16-31-27",
+            "content": "@@ -115,19 +115,21 @@\n .0%0A%09var \n-num\n+index\n  int32%0A%09\n@@ -136,16 +136,11 @@\n for \n-index, _\n+num\n  := \n@@ -239,11 +239,8 @@\n %0A%0A%09%09\n-// \n fmt.\n@@ -321,19 +321,19 @@\n %0A%09%09%09\n-num = index\n+index = num\n %0A%09%09%7D\n@@ -349,16 +349,18 @@\n Println(\n-num\n+index\n )%0A%0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-16_16-40-21",
+            "content": "@@ -64,16 +64,18 @@\n adas int\n+32\n %0A%09fmt.Sc\n@@ -126,33 +126,41 @@\n  int\n+32\n %0A%09for i\n- := 0; i %3C\n+ndex, _ := range\n  rodadas\n ; i+\n@@ -159,13 +159,8 @@\n adas\n-; i++\n  %7B%0A%09\n@@ -330,16 +330,20 @@\n %09num = i\n+ndex\n %0A%09%09%7D%0A%09%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-16_16-42-49",
+            "content": "@@ -230,78 +230,8 @@\n nue%0A\n-%09%09%09if i == rodadas-1 %7B%0A%09%09%09%09fmt.Println(%22sem ganhador%22)%0A%09%09%09%09break%0A%09%09%09%7D%0A\n %09%09%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-16_16-43-59",
+            "content": "@@ -226,16 +226,85 @@\n ontinue%0A\n+%09%09%09if i == rodadas-1 %7B%0A%09%09%09%09fmt.Println(%22sem ganhador%22)%0A%09%09%09%09break%0A%09%09%09%7D\n %0A%09%09%7D%0A%0A%09%09\n@@ -407,64 +407,8 @@\n %0A%09%7D%0A\n-%09if num == 0 %7B%0A%09%09fmt.Println(%22sem ganhador%22)%0A%09%7D else %7B%0A%09\n %09fmt\n@@ -420,15 +420,12 @@\n tln(num)\n-%0A%09%7D\n %0A%0A%7D%0A\n",
+            "lines": "32"
+        },
+        {
+            "label": "2026-03-16_16-45-20",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"math\"\n)\n\nfunc main() {\n\tvar rodadas int\n\tfmt.Scanln(&rodadas)\n\tvencedor := 99999.0\n\tvar num int\n\tfor i := 0; i < rodadas; i++ {\n\t\ta := 0\n\t\tb := 0\n\t\tfmt.Scan(&a, &b)\n\t\tif a < 10 || b < 10 {\n\t\t\tcontinue\n\n\t\t}\n\n\t\t// fmt.Println(math.Abs(float64(a - b)))\n\t\tif math.Abs(float64(a-b)) < vencedor {\n\t\t\tnum = i\n\t\t}\n\t}\n\tif num == 0 {\n\t\tfmt.Println(\"sem ganhador\")\n\t} else {\n\t\tfmt.Println(num)\n\t}\n\n}\n",
+            "lines": "33"
+        }
+    ]
+}

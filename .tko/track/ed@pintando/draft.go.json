@@ -1,0 +1,29 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-11_21-36-10",
+            "content": "@@ -192,14 +192,8 @@\n f%5Cn%22\n-, area\n )%0A%7D%0A\n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-03-11_21-37-25",
+            "content": "@@ -126,27 +126,8 @@\n )/2%0A\n-    fmt.Println(p)%0A\n     \n",
+            "lines": "13"
+        },
+        {
+            "label": "2026-03-11_21-38-15",
+            "content": "@@ -110,65 +110,8 @@\n t64%0A\n-    fmt.Scanln(&a)%0A    fmt.Scanln(&b)%0A    fmt.Scanln(&c)%0A\n     \n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-03-11_21-38-41",
+            "content": "@@ -186,11 +186,8 @@\n %0A   \n- //\n  fmt\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-11_21-39-09",
+            "content": "package main\nimport (\n    \"fmt\"\n    \"math\"\n)\nfunc main() {\n    var a float64\n    var b float64\n    var c float64\n    fmt.Scanln(&a)\n    fmt.Scanln(&b)\n    fmt.Scanln(&c)\n    p := (a\u6fe7)/2\n    // fmt.Println(p)\n    area := math.Sqrt(p*(p-a)*(p-b)*(p-c))\n    fmt.Printf(\"%.2f\\n\", area)\n}\n",
+            "lines": "17"
+        }
+    ]
+}
