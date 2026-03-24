@@ -97,8 +97,78 @@
         },
         {
             "label": "2026-03-16_16-02-39",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar h, p, f, d int32\n\tfmt.Scanln(&h)\n\tfmt.Scanln(&p)\n\tfmt.Scanln(&f)\n\tfmt.Scanln(&d)\n\tfor {\n\t\tif f > 15 && d == 1 {\n\t\t\tf = f % 15\n\t\t} else if f < 0 {\n\t\t\tf = 15\n\t\t}\n\n\t\tif d == -1 {\n\t\t\tf--\n\t\t} else {\n\t\t\tf++\n\t\t}\n\n\t\tif f == p {\n\t\t\tfmt.Println(\"N\")\n\t\t\tbreak\n\t\t}\n\t\tif f == h {\n\t\t\tfmt.Println(\"S\")\n\t\t\tbreak\n\t\t}\n\n\t}\n\n}\n",
+            "content": "@@ -140,16 +140,26 @@\n  f %3E 15 \n+&& d == 1 \n %7B%0A%09%09%09f =\n",
             "lines": "35"
+        },
+        {
+            "label": "2026-03-24_15-34-15",
+            "content": "@@ -186,24 +186,70 @@\n %09f = 15%0A%09%09%7D%0A\n+%0A%09%09if d == -1 %7B%0A%09%09%09f--%0A%09%09%7D else %7B%0A%09%09%09f++%0A%09%09%7D%0A%0A\n %09%09if f == p \n@@ -335,53 +335,8 @@\n %09%7D%0A%0A\n-%09%09if d == -1 %7B%0A%09%09%09f--%0A%09%09%7D else %7B%0A%09%09%09f++%0A%09%09%7D%0A%0A\n %09%7D%0A%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-24_15-41-56",
+            "content": "@@ -128,16 +128,78 @@\n %0A%09for %7B%0A\n+%09%09if f %3E 15 %7B%0A%09%09%09f = f %25 15%0A%09%09%7D else if f %3C 0 %7B%0A%09%09%09f = 15%0A%09%09%7D%0A\n %09%09if f =\n@@ -287,70 +287,8 @@\n %0A%09%09%7D\n-%0A%09%09if f %3E 15 %7B%0A%09%09%09f = f %25 15%0A%09%09%7D else if f %3C 0 %7B%0A%09%09%09f = 15%0A%09%09%7D\n %0A%0A%09%09\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-24_15-43-13",
+            "content": "@@ -132,70 +132,8 @@\n r %7B%0A\n-%09%09if f %3E 15 %7B%0A%09%09%09f = f %25 15%0A%09%09%7D else if f %3C 0 %7B%0A%09%09%09f = 15%0A%09%09%7D%0A\n %09%09if\n@@ -221,16 +221,78 @@\n reak%0A%09%09%7D\n+%0A%09%09if f %3E 15 %7B%0A%09%09%09f = f %25 15%0A%09%09%7D else if f %3C 0 %7B%0A%09%09%09f = 15%0A%09%09%7D\n %0A%0A%09%09if d\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-24_15-43-24",
+            "content": "@@ -308,10 +308,10 @@\n %09%09%09f\n-++\n+--\n %0A%09%09%7D\n@@ -318,26 +318,26 @@\n  else %7B%0A%09%09%09f\n---\n+++\n %0A%09%09%7D%0A%0A%09%7D%0A%0A%7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-24_15-48-43",
+            "content": "@@ -308,10 +308,10 @@\n %09%09%09f\n---\n+++\n %0A%09%09%7D\n@@ -318,26 +318,26 @@\n  else %7B%0A%09%09%09f\n-++\n+--\n %0A%09%09%7D%0A%0A%09%7D%0A%0A%7D%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-24_15-49-00",
+            "content": "@@ -194,31 +194,8 @@\n %09%09%7D%0A\n-%09%09fmt.Printf(%22%25d %22, f)%0A\n %09%09if\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-24_15-51-00",
+            "content": "@@ -158,9 +158,9 @@\n  %25 1\n-6\n+5\n %0A%09%09%7D\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-24_15-54-20",
+            "content": "@@ -331,10 +331,10 @@\n %09%09%09f\n-++\n+--\n %0A%09%09%7D\n@@ -341,26 +341,26 @@\n  else %7B%0A%09%09%09f\n---\n+++\n %0A%09%09%7D%0A%0A%09%7D%0A%0A%7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-24_15-55-27",
+            "content": "@@ -331,10 +331,10 @@\n %09%09%09f\n---\n+++\n %0A%09%09%7D\n@@ -341,26 +341,26 @@\n  else %7B%0A%09%09%09f\n-++\n+--\n %0A%09%09%7D%0A%0A%09%7D%0A%0A%7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-24_15-55-58",
+            "content": "@@ -190,37 +190,8 @@\n  15%0A\n-%09%09%09fmt.Println(%22teste cond%22)%0A\n %09%09%7D%0A\n",
+            "lines": "35"
+        },
+        {
+            "label": "2026-03-24_15-58-05",
+            "content": "@@ -75,18 +75,54 @@\n n(&h\n-, &p, &f, \n+)%0A%09fmt.Scanln(&p)%0A%09fmt.Scanln(&f)%0A%09fmt.Scanln(\n &d)%0A\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-03-24_15-58-55",
+            "content": "@@ -66,16 +66,18 @@\n fmt.Scan\n+ln\n (&h, &p,\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-24_15-59-31",
+            "content": "@@ -152,17 +152,43 @@\n  15%0A\n+%09%09%09fmt.Println(%22teste cond%22)%0A\n %09%09%7D%0A%09%09\n-// \n fmt.\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-24_16-00-24",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar h, p, f, d int32\n\tfmt.Scan(&h, &p, &f, &d)\n\tfor {\n\t\tif f > 15 {\n\t\t\tf = f % 16\n\t\t} else if f < 0 {\n\t\t\tf = 15\n\t\t}\n\t\t// fmt.Printf(\"%d \", f)\n\t\tif f == p {\n\t\t\tfmt.Println(\"N\")\n\t\t\tbreak\n\t\t}\n\t\tif f == h {\n\t\t\tfmt.Println(\"S\")\n\t\t\tbreak\n\t\t}\n\n\t\tif d == -1 {\n\t\t\tf--\n\t\t} else {\n\t\t\tf++\n\t\t}\n\n\t}\n\n}\n",
+            "lines": "32"
         }
     ]
 }

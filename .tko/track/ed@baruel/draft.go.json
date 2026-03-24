@@ -1,0 +1,74 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-23_15-54-25",
+            "content": "@@ -40,171 +40,30 @@\n  %7B%0A%09\n-var qtd, baruel int%0A%09fmt.Scan(&qtd, &baruel)%0A%09figurinhas := make(%5B%5Dint, qtd)%0A%0A%09for i := range figurinhas %7B%0A%09%09fmt.Scan(&figurinhas%5Bi%5D)%0A%09%7D%0A%0A%09fmt.Println(figurinhas)%0A\n+fmt.Println(%22Qx Code%22)\n %0A%7D%0A%0A\n@@ -71,12 +71,12 @@\n unc \n-cont\n+busc\n arNu\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-23_16-02-50",
+            "content": "@@ -108,22 +108,19 @@\n (%5B%5Dint, \n-baruel\n+qtd\n )%0A%0A%09for \n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-23_16-03-43",
+            "content": "@@ -120,59 +120,8 @@\n el)%0A\n-%09var faltantes %5B%5Dint%0A%09//lendo os valores de entrada\n %0A%09fo\n@@ -183,185 +183,31 @@\n %0A%0A%09f\n-or _, numero := range figurinhas %7B%0A%09%09if contarNumero(figurinhas, numero) == 0 %7B%0A%09%09%09faltantes = append(faltantes, numero)%0A%09%09%7D%0A%09%7D%0A%0A%09fmt.Println(figurinhas)%0A%09fmt.Println(faltantes)\n+mt.Println(figurinhas)%0A\n %0A%7D%0A%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-03-23_16-11-44",
+            "content": "@@ -237,30 +237,37 @@\n for \n-i := 1; i %3C qtd+1; i++\n+_, numero := range figurinhas\n  %7B%0A%09\n@@ -295,17 +295,22 @@\n rinhas, \n-i\n+numero\n ) == 0 %7B\n@@ -343,17 +343,22 @@\n tantes, \n-i\n+numero\n )%0A%09%09%7D%0A%09%7D\n@@ -363,50 +363,8 @@\n %09%7D%0A%0A\n-%09fmt.Println(contarNumero(figurinhas, 1))%0A\n %09fmt\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-23_16-21-03",
+            "content": "@@ -342,16 +342,58 @@\n %09%09%7D%0A%09%7D%0A%0A\n+%09fmt.Println(contarNumero(figurinhas, 1))%0A\n %09fmt.Pri\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-23_16-21-57",
+            "content": "@@ -395,35 +395,8 @@\n es)%0A\n-%09printFormatado(faltantes)%0A\n %7D%0A%0Af\n@@ -543,185 +543,4 @@\n t%0A%7D%0A\n-%0Afunc printFormatado(lista %5B%5Dint) %7B%0A%09fmt.Print(%22%5B %22)%0A%09for index, num := range lista %7B%0A%09%09if index != len(lista)-1 %7B%0A%09%09%09fmt.Printf(%22%25d %22, num)%0A%09%09%7D else %7B%0A%09%09%09fmt.Println(num)%0A%09%09%7D%0A%09%7D%0A%7D%0A\n",
+            "lines": "33"
+        },
+        {
+            "label": "2026-03-23_16-25-23",
+            "content": "@@ -734,16 +734,11 @@\n rint\n-f(%22%25d%22, \n+ln(\n num)\n@@ -749,26 +749,6 @@\n %0A%09%7D%0A\n-%09fmt.Printf(%22 %5D%5Cn%22)%0A\n %7D%0A\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-23_16-27-44",
+            "content": "@@ -602,16 +602,33 @@\n %5Dint) %7B%0A\n+%09fmt.Print(%22%5B %22)%0A\n %09for ind\n@@ -739,10 +739,8 @@\n (%22%25d\n-%5Cn\n %22, n\n@@ -750,10 +750,30 @@\n %0A%09%09%7D%0A%09%7D%0A\n+%09fmt.Printf(%22 %5D%5Cn%22)%0A\n %7D%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-23_16-28-33",
+            "content": "@@ -372,13 +372,18 @@\n s)%0A%09\n-if le\n+fmt.Printl\n n(fa\n@@ -394,17 +394,9 @@\n tes)\n- != 0 %7B%0A%09\n+%0A\n %09pri\n@@ -422,40 +422,8 @@\n es)%0A\n-%09%7D else %7B%0A%09%09fmt.Println(%22N%22)%0A%09%7D%0A\n %7D%0A%0Af\n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-03-23_16-30-10",
+            "content": "@@ -120,29 +120,8 @@\n el)%0A\n-%09var repetidas %5B%5Dint%0A\n %09var\n@@ -338,139 +338,8 @@\n  i)%0A\n-%09%09%7D else if contarNumero(figurinhas, i) %3E 1 %7B%0A%09%09%09for range contarNumero(figurinhas, i) %7B%0A%09%09%09%09repetidas = append(repetidas, i)%0A%09%09%09%7D%0A\n %09%09%7D%0A\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-03-23_16-38-53",
+            "content": "@@ -507,23 +507,24 @@\n Println(\n-repetid\n+figurinh\n as)%0A%09if \n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-03-23_16-39-02",
+            "content": "@@ -445,12 +445,8 @@\n , i)\n- - 1\n  %7B%0A%09\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-03-23_16-39-13",
+            "content": "@@ -503,92 +503,30 @@\n %7D%0A%0A%09\n-if len(repetidas) != 0 %7B%0A%09%09printFormatado(repetidas)%0A%09%7D else %7B%0A%09%09fmt.Println(%22N%22)%0A%09%7D\n+fmt.Println(repetidas)\n %0A%09if\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-03-23_16-43-30",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar qtd, baruel int\n\tfmt.Scan(&qtd, &baruel)\n\tfigurinhas := make([]int, baruel)\n\tvar repetidas []int\n\tvar faltantes []int\n\t//lendo os valores de entrada\n\tfor i := range figurinhas {\n\t\tfmt.Scan(&figurinhas[i])\n\t}\n\n\tfor i := 1; i < qtd+1; i++ {\n\t\tif contarNumero(figurinhas, i) == 0 {\n\t\t\tfaltantes = append(faltantes, i)\n\t\t} else if contarNumero(figurinhas, i) > 1 {\n\t\t\tfor range contarNumero(figurinhas, i) - 1 {\n\t\t\t\trepetidas = append(repetidas, i)\n\t\t\t}\n\t\t}\n\t}\n\n\tif len(repetidas) != 0 {\n\t\tprintFormatado(repetidas)\n\t} else {\n\t\tfmt.Println(\"N\")\n\t}\n\tif len(faltantes) != 0 {\n\t\tprintFormatado(faltantes)\n\t} else {\n\t\tfmt.Println(\"N\")\n\t}\n}\n\nfunc contarNumero(array []int, numero int) int {\n\tcount := 0\n\tfor _, num := range array {\n\t\tif num == numero {\n\t\t\tcount++\n\t\t}\n\t}\n\treturn count\n}\n\nfunc printFormatado(lista []int) {\n\tfor index, num := range lista {\n\t\tif index != len(lista)-1 {\n\t\t\tfmt.Printf(\"%d \", num)\n\t\t} else {\n\t\t\tfmt.Printf(\"%d\\n\", num)\n\t\t}\n\t}\n}\n",
+            "lines": "56"
+        }
+    ]
+}

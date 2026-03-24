@@ -1,5 +1,20 @@
 package main
-import "fmt"
+
 func main() {
-    fmt.Println("qxcode")
+	var q int
+	var d string
+
+	for i := range q {
+
+	}
+
+	if d == 'L' {
+
+	} else if d == 'R' {
+
+	} else if d == 'U' {
+
+	} else {
+
+	}
 }
