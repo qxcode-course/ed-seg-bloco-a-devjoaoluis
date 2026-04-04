@@ -1,0 +1,49 @@
+2026-04-04 00:15:54, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-04-04 00:15:57, EXEC, v:1, k:ed@gomos, mode:FREE
+2026-04-04 00:19:10, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0
+2026-04-04 00:19:52, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:39
+2026-04-04 00:21:51, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:40
+2026-04-04 00:27:18, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:42
+2026-04-04 00:27:25, EXEC, v:1, k:ed@gomos, mode:FULL, rate:0, size:42
+2026-04-04 00:27:37, EXEC, v:1, k:ed@gomos, mode:FULL, rate:33, size:41
+2026-04-04 00:28:19, EXEC, v:1, k:ed@gomos, mode:FULL, rate:33, size:41
+2026-04-04 00:28:55, EXEC, v:1, k:ed@gomos, mode:FULL, rate:66, size:41
+2026-04-04 00:32:14, EXEC, v:1, k:ed@gomos, mode:FULL, rate:66, size:42
+2026-04-04 00:40:18, EXEC, v:1, k:ed@gomos, mode:FULL, rate:66, size:53
+2026-04-04 00:41:50, EXEC, v:1, k:ed@gomos, mode:FULL, rate:66, size:53
+2026-04-04 00:45:14, EXEC, v:1, k:ed@gomos, mode:FULL, rate:66, size:53
+2026-04-04 01:03:36, EXEC, v:1, k:ed@gomos, mode:FULL, rate:66, size:73
+2026-04-04 01:06:50, EXEC, v:1, k:ed@gomos, mode:FULL, rate:66, size:74
+2026-04-04 01:09:46, EXEC, v:1, k:ed@gomos, mode:FULL, rate:66, size:80
+2026-04-04 01:17:27, EXEC, v:1, k:ed@gomos, mode:FULL, rate:66, size:74
+2026-04-04 01:18:02, EXEC, v:1, k:ed@gomos, mode:FULL, rate:66, size:74
+2026-04-04 01:18:14, EXEC, v:1, k:ed@gomos, mode:FULL, rate:66, size:80
+2026-04-04 01:20:20, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-04-04 01:20:25, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-04-04 01:20:27, EXEC, v:1, k:ed@gomos, mode:FREE, size:74
+2026-04-04 01:20:33, EXEC, v:1, k:ed@gomos, mode:FULL, rate:66
+2026-04-04 01:23:54, EXEC, v:1, k:ed@gomos, mode:FULL, rate:66, size:76
+2026-04-04 01:24:19, EXEC, v:1, k:ed@gomos, mode:FULL, rate:66, size:76
+2026-04-04 01:24:44, EXEC, v:1, k:ed@gomos, mode:FULL, rate:66, size:76
+2026-04-04 01:25:40, EXEC, v:1, k:ed@gomos, mode:FULL, rate:66, size:76
+2026-04-04 01:27:34, EXEC, v:1, k:ed@gomos, mode:FULL, rate:66, size:76
+2026-04-04 01:28:22, EXEC, v:1, k:ed@gomos, mode:FULL, rate:66, size:76
+2026-04-04 01:28:57, EXEC, v:1, k:ed@gomos, mode:FULL, rate:66, size:76
+2026-04-04 01:33:43, EXEC, v:1, k:ed@gomos, mode:FULL, rate:66, size:74
+2026-04-04 01:36:22, EXEC, v:1, k:ed@gomos, mode:FULL, rate:66, size:76
+2026-04-04 01:39:05, EXEC, v:1, k:ed@gomos, mode:FULL, rate:83, size:76
+2026-04-04 01:44:46, EXEC, v:1, k:ed@gomos, mode:FULL, rate:83, size:91
+2026-04-04 01:45:56, EXEC, v:1, k:ed@gomos, mode:FULL, rate:83, size:91
+2026-04-04 01:45:58, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-04-04 01:46:02, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-04-04 01:46:04, EXEC, v:1, k:ed@gomos, mode:FULL, rate:83
+2026-04-04 01:47:43, EXEC, v:1, k:ed@gomos, mode:FULL, rate:83, size:93
+2026-04-04 01:52:56, EXEC, v:1, k:ed@gomos, mode:FULL, rate:83, size:100
+2026-04-04 01:53:15, EXEC, v:1, k:ed@gomos, mode:FULL, rate:83, size:99
+2026-04-04 01:53:28, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-04-04 01:54:15, MOVE, v:1, k:ed@gomos, mode:PICK
+2026-04-04 01:54:17, EXEC, v:1, k:ed@gomos, mode:FULL, rate:83
+2026-04-04 01:54:50, EXEC, v:1, k:ed@gomos, mode:FULL, rate:83, size:93
+2026-04-04 01:59:30, EXEC, v:1, k:ed@gomos, mode:FULL, rate:100, size:47
+2026-04-04 01:59:37, MOVE, v:1, k:ed@gomos, mode:BACK
+2026-04-04 02:00:46, SELF, v:1, k:ed@gomos, self:1, rate:100, study:100, concept:1, refactor:1

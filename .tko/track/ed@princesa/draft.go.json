@@ -1,0 +1,124 @@
+{
+    "patches": [
+        {
+            "label": "2026-03-24_16-12-19",
+            "content": "@@ -77,125 +77,24 @@\n     \n-var elementos %5B%5Dint%0A    fmt.Scan(&n, &e)%0A    %0A%0A    for i range := n %7B%0A        elementos = append(elementos, i)%0A    %7D%0A\n+fmt.Scan(&n, &e)\n %0A   \n@@ -110,17 +110,16 @@\n tln(\n-elementos\n+%22qxcode%22\n )%0A%7D%0A\n",
+            "lines": "10"
+        },
+        {
+            "label": "2026-03-24_16-19-04",
+            "content": "@@ -10,22 +10,28 @@\n ain%0A\n-%0A\n import \n+%7B%0A    \n %22fmt%22%0A\n+%7D\n %0Afun\n@@ -41,17 +41,20 @@\n ain() %7B%0A\n-%09\n+    \n var n in\n@@ -51,25 +51,28 @@\n   var n int%0A\n-%09\n+    \n var e int%0A%09v\n@@ -69,17 +69,20 @@\n r e int%0A\n-%09\n+    \n var elem\n@@ -93,17 +93,20 @@\n s %5B%5Dint%0A\n-%09\n+    \n fmt.Scan\n@@ -118,31 +118,45 @@\n &e)%0A\n-%0A%09\n+    %0A%0A    \n for i\n- :=\n  range\n+ :=\n  n %7B%0A\n-%09%09\n+        \n elem\n@@ -188,13 +188,19 @@\n  i)%0A\n-%09%7D%0A%0A%09\n+    %7D%0A%0A    \n fmt.\n",
+            "lines": "17"
+        },
+        {
+            "label": "2026-03-24_16-20-39",
+            "content": "@@ -111,23 +111,15 @@\n  := \n-1; i %3C n+1; i++\n+range n\n  %7B%0A%09\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-03-24_16-21-29",
+            "content": "@@ -101,32 +101,8 @@\n e)%0A%0A\n-%09//adi%C3%A7%C3%A3o dos elementos%0A\n %09for\n@@ -167,264 +167,31 @@\n %0A%09%7D%0A\n-    printFormatado(elementos, e)%0A%7D%0A%0Afunc printFormatado(arr %5B%5Dint, esc int) %7B%0A%09fmt.Print(%22%5B %22)%0A%09for _, num := arr %7B%0A        if num==esc %7B%0A            fmt.Printf(%22%25d %22, num)%0A        %7D else %7B%0A            fmt.Printf(%22%25d%3E %22, num)%0A        %7D%0A%09%7D%0A%09fmt.Printf(%22%5D%5Cn%22\n+%0A%09fmt.Println(elementos\n )%0A%7D%0A\n",
+            "lines": "16"
+        },
+        {
+            "label": "2026-03-24_16-28-03",
+            "content": "@@ -187,17 +187,20 @@\n , i)%0A%09%7D%0A\n-%09\n+    \n printFor\n@@ -301,41 +301,48 @@\n  := \n-range arr %7B%0A%09%09\n+arr %7B%0A        \n if num\n- \n ==\n- \n esc %7B%0A\n-%09%09%09\n+            \n fmt.\n@@ -360,18 +360,24 @@\n %22, num)%0A\n-%09%09\n+        \n %7D else %7B\n@@ -381,11 +381,20 @@\n e %7B%0A\n-%09%09%09\n+            \n fmt.\n@@ -413,18 +413,24 @@\n %22, num)%0A\n-%09%09\n+        \n %7D%0A%09%7D%0A%09fm\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-24_16-28-19",
+            "content": "@@ -345,9 +345,8 @@\n (%22%25d\n-%3E\n  %22, \n@@ -370,32 +370,33 @@\n %09%09fmt.Printf(%22%25d\n+%3E\n  %22, num)%0A%09%09%7D%0A%09%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-24_16-29-24",
+            "content": "@@ -191,134 +191,40 @@\n %0A%09%7D%0A\n-%0A%09for %7B%0A%09%09if len(elementos) == 1 %7B%0A%09%09%09break%0A%09%09%7D else %7B%0A%0A%09%09%7D%0A%0A%09%7D%0A%0A%7D%0A%0A// fun%C3%A7%C3%A3o feita para printar no formato que a quest%C3%A3o pede\n+%09printFormatado(elementos, e)%0A%7D%0A\n %0Afun\n@@ -420,78 +420,4 @@\n )%0A%7D%0A\n-%0Afunc removeNext(arr %5B%5Dint, esc int) %7B%0A%09if len(arr) == 1 %7B%0A%09%09return%0A%09%7D%0A%0A%7D%0A\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-30_16-12-52",
+            "content": "@@ -510,8 +510,82 @@\n %5D%5Cn%22)%0A%7D%0A\n+%0Afunc removeNext(arr %5B%5Dint, esc int) %7B%0A%09if len(arr) == 1 %7B%0A%09%09return%0A%09%7D%0A%0A%7D%0A\n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-03-30_16-13-43",
+            "content": "@@ -246,44 +246,14 @@\n e %7B%0A\n-%09%09%09printFormatado(elementos, e)\n %0A%09%09%7D%0A\n+%0A\n %09%7D%0A%0A\n@@ -514,89 +514,4 @@\n )%0A%7D%0A\n-%0Afunc removeNext(arr %5B%5Dint, esc int) %7B%0A%09if len(arr) == 1 %7B%0A%09%09return%0A%09%7D else %7B%0A%0A%09%7D%0A%0A%7D%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-03-30_16-17-07",
+            "content": "@@ -278,36 +278,8 @@\n  e)%0A\n-%09%09%09removeNext(elementos, e)%0A\n %09%09%7D%0A\n@@ -581,27 +581,9 @@\n nt) \n-%5B%5Dint %7B%0A%09index := 0\n+%7B\n %0A%09if\n@@ -607,20 +607,16 @@\n %09%09return\n- arr\n %0A%09%7D else\n@@ -622,181 +622,11 @@\n e %7B%0A\n-%09%09for ind, value := range arr %7B%0A%09%09%09if value == esc %7B%0A%09%09%09%09index = ind + 1%0A%09%09%09%09break%0A%09%09%09%7D%0A%09%09%7D%0A%09%09var newArr %5B%5Dint%0A%09%09newArr = append(newArr%5B:index%5D, newArr...)%0A%09%09return newArr\n %0A%09%7D\n+%0A\n %0A%7D%0A\n",
+            "lines": "46"
+        },
+        {
+            "label": "2026-03-30_16-24-56",
+            "content": "@@ -745,70 +745,8 @@\n + 1%0A\n-%09%09%09%09if index %3E len(arr) %7B%0A%09%09%09%09%09index = index %25 len(arr)%0A%09%09%09%09%7D%0A\n %09%09%09%09\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-03-30_16-26-59",
+            "content": "@@ -885,18 +885,8 @@\n wArr\n-%5Bindex+1:%5D\n ...)\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-03-31_19-11-27",
+            "content": "@@ -859,17 +859,20 @@\n  append(\n-a\n+newA\n rr%5B:inde\n@@ -875,17 +875,20 @@\n index%5D, \n-a\n+newA\n rr%5Bindex\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-03-31_19-12-14",
+            "content": "@@ -302,21 +302,16 @@\n tos, e)%0A\n-%09%09%09%7D%0A\n %09%09%7D%0A%09%7D%0A%0A\n@@ -629,25 +629,8 @@\n = 0%0A\n-%09toKill := false%0A\n %09if \n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-03-31_19-27-54",
+            "content": "@@ -302,23 +302,29 @@\n tos, e)%0A\n+%09%09%09%7D%0A\n %09%09%7D%0A%09%7D%0A\n+%0A\n %7D%0A%0A// fu\n@@ -726,27 +726,8 @@\n r %7B%0A\n-%09%09%09tam := len(arr)%0A\n %09%09%09i\n@@ -790,10 +790,8 @@\n arr)\n--1\n  %7B%0A%09\n@@ -811,16 +811,19 @@\n ndex\n-%25tam - 1\n+ %25 len(arr)\n %0A%09%09%09\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-03-31_19-28-20",
+            "content": "@@ -624,16 +624,33 @@\n ex := 0%0A\n+%09toKill := false%0A\n %09if len(\n",
+            "lines": "59"
+        },
+        {
+            "label": "2026-03-31_19-28-31",
+            "content": "@@ -828,55 +828,108 @@\n %09%09%09%09\n-arr%5Bindex%5D = 0%0A%09%09%09%09break%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09return arr\n+break%0A%09%09%09%7D%0A%09%09%7D%0A%09%09var newArr %5B%5Dint%0A%09%09newArr = append(arr%5B:index%5D, arr%5Bindex+1:%5D...)%0A%09%09return newArr%0A%09%7D\n %0A%7D%0A\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-03-31_19-30-55",
+            "content": "@@ -302,25 +302,16 @@\n tos, e)%0A\n-%09%09%09break%0A\n %09%09%7D%0A%09%7D%0A%7D\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-03-31_19-32-27",
+            "content": "@@ -712,45 +712,8 @@\n r %7B%0A\n-%09%09%09if value == 0 %7B%0A%09%09%09%09continue%0A%09%09%09%7D%0A\n %09%09%09t\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-03-31_19-33-25",
+            "content": "@@ -626,254 +626,20 @@\n  %7B%0A%09\n-var killerInd int%0A%09matar := 0%0A%09for index, value := range arr %7B%0A%09%09if value == esc %7B%0A%09%09%09killerInd = index%0A%09%09%09matar = killerInd + 1%0A%09%09%7D%0A%0A%09%09if matar %3E= len(arr)-1 %7B%0A%09%09%09matar = matar%25len(arr) - 1%0A%09%09%7D%0A%09%09arr%5Bmatar%5D = 0%0A%09%7D%0A%09return arr%0A%09// index := 0%0A%09// \n+index := 0%0A%09\n if l\n@@ -654,19 +654,16 @@\n == 1 %7B%0A%09\n-// \n %09return \n@@ -667,19 +667,16 @@\n rn arr%0A%09\n-// \n %7D else %7B\n@@ -677,19 +677,16 @@\n else %7B%0A%09\n-// \n %09for ind\n@@ -709,19 +709,16 @@\n  arr %7B%0A%09\n-// \n %09%09if val\n@@ -728,19 +728,16 @@\n == 0 %7B%0A%09\n-// \n %09%09%09conti\n@@ -741,27 +741,21 @@\n ntinue%0A%09\n-// \n %09%09%7D%0A%09\n-// \n %09%09tam :=\n@@ -765,19 +765,16 @@\n n(arr)%0A%09\n-// \n %09%09if val\n@@ -786,19 +786,16 @@\n  esc %7B%0A%09\n-// \n %09%09%09index\n@@ -806,19 +806,16 @@\n nd + 1%0A%09\n-// \n %09%09%09if in\n@@ -834,19 +834,16 @@\n r)-1 %7B%0A%09\n-// \n %09%09%09%09inde\n@@ -865,20 +865,14 @@\n  1%0A%09\n-// \n %09%09%09%7D%0A%09\n-// \n %09%09%09a\n@@ -886,19 +886,16 @@\n x%5D = 0%0A%09\n-// \n %09%09%09break\n@@ -900,32 +900,20 @@\n ak%0A%09\n-// \n %09%09%7D%0A%09\n-// \n %09%7D%0A%09\n-// %7D%0A%09// \n+%7D%0A%09\n retu\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-03-31_19-42-19",
+            "content": "@@ -803,12 +803,9 @@\n atar\n- %25 (\n+%25\n len(\n@@ -812,17 +812,16 @@\n arr) - 1\n-)\n %0A%09%09%7D%0A%09%09a\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-03-31_19-42-44",
+            "content": "@@ -689,44 +689,8 @@\n r %7B%0A\n-%09%09if value == 0 %7B%0A%09%09%09continue%0A%0A%09%09%7D%0A%0A\n %09%09if\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-03-31_19-43-10",
+            "content": "@@ -281,298 +281,48 @@\n %0A%09%09%09\n-matarProximo(elementos, e)%0A%09%09%09e = proxKiller(elementos, e)%0A%09%09%09break%0A%09%09%7D%0A%09%7D%0A%7D%0A%0Afunc proxKiller(arr %5B%5Dint, antigo int) int %7B%0A%09var killer int%0A%09for ind, value := range arr %7B%0A%09%09if value == antigo %7B%0A%09%09%09killer = ind + 1%0A%09%09%09if killer != 0 %7B%0A%09%09%09%09return killer %25 (len(arr))%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09return killer\n+removeNext(elementos, e)%0A%09%09%09break%0A%09%09%7D%0A%09%7D\n %0A%7D%0A%0A\n@@ -586,20 +586,18 @@\n unc \n-matarProximo\n+removeNext\n (arr\n@@ -715,16 +715,17 @@\n ontinue%0A\n+%0A\n %09%09%7D%0A%0A%09%09i\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-03-31_19-54-28",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n int\n\tvar e int\n\tvar elementos []int\n\tfmt.Scan(&n, &e)\n\n\t//adi\u00e7\u00e3o dos elementos\n\tfor i := 1; i < n+1; i++ {\n\t\telementos = append(elementos, i)\n\t}\n\n\tfor {\n\t\tif len(elementos) == 1 {\n\t\t\tbreak\n\t\t} else {\n\t\t\tprintFormatado(elementos, e)\n\t\t\tmatarProximo(elementos, e)\n\t\t\te = proxKiller(elementos, e)\n\t\t\tbreak\n\t\t}\n\t}\n}\n\nfunc proxKiller(arr []int, antigo int) int {\n\tvar killer int\n\tfor ind, value := range arr {\n\t\tif value == antigo {\n\t\t\tkiller = ind + 1\n\t\t\tif killer != 0 {\n\t\t\t\treturn killer % (len(arr))\n\t\t\t}\n\t\t}\n\t}\n\treturn killer\n}\n\n// fun\u00e7\u00e3o feita para printar no formato que a quest\u00e3o pede\nfunc printFormatado(arr []int, esc int) {\n\tfmt.Print(\"[ \")\n\tfor _, num := range arr {\n\t\tif num == esc {\n\t\t\tfmt.Printf(\"%d> \", num)\n\t\t} else {\n\t\t\tfmt.Printf(\"%d \", num)\n\t\t}\n\t}\n\tfmt.Printf(\"]\\n\")\n}\n\nfunc matarProximo(arr []int, esc int) []int {\n\tvar killerInd int\n\tmatar := 0\n\tfor index, value := range arr {\n\t\tif value == 0 {\n\t\t\tcontinue\n\t\t}\n\n\t\tif value == esc {\n\t\t\tkillerInd = index\n\t\t\tmatar = killerInd + 1\n\t\t}\n\n\t\tif matar >= len(arr)-1 {\n\t\t\tmatar = matar % (len(arr) - 1)\n\t\t}\n\t\tarr[matar] = 0\n\t}\n\treturn arr\n\t// index := 0\n\t// if len(arr) == 1 {\n\t// \treturn arr\n\t// } else {\n\t// \tfor ind, value := range arr {\n\t// \t\tif value == 0 {\n\t// \t\t\tcontinue\n\t// \t\t}\n\t// \t\ttam := len(arr)\n\t// \t\tif value == esc {\n\t// \t\t\tindex = ind + 1\n\t// \t\t\tif index > len(arr)-1 {\n\t// \t\t\t\tindex = index%tam - 1\n\t// \t\t\t}\n\t// \t\t\tarr[index] = 0\n\t// \t\t\tbreak\n\t// \t\t}\n\t// \t}\n\t// }\n\t// return arr\n}\n",
+            "lines": "93"
+        }
+    ]
+}

@@ -3,45 +3,97 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"math"
 	"os"
 	"strconv"
 	"strings"
 )
 
 func getMen(vet []int) []int {
-	_ = vet
-	return nil
+	var men []int
+	for _, val := range vet {
+		if val > 0 {
+			men = append(men, val)
+		}
+	}
+	return men
 }
 
 func getCalmWomen(vet []int) []int {
-	_ = vet
-	return nil
+	var calmWomen []int
+	for _, val := range vet {
+		if val < 0 && val > -10 {
+			calmWomen = append(calmWomen, val)
+		}
+	}
+
+	return calmWomen
 }
 
 func sortVet(vet []int) []int {
-	_ = vet
-	return nil
+	for i := range vet {
+		for j := 0; j < len(vet)-i-1; j++ {
+			if vet[j] > vet[j+1] {
+				vet[j], vet[j+1] = vet[j+1], vet[j]
+			}
+		}
+	}
+	return vet
 }
 
 func sortStress(vet []int) []int {
-	_ = vet
-	return nil
+	for i := range vet {
+		for j := 0; j < len(vet)-i-1; j++ {
+			if math.Abs(float64(vet[j])) > math.Abs(float64(vet[j+1])) {
+				vet[j], vet[j+1] = vet[j+1], vet[j]
+			}
+		}
+	}
+	return vet
 }
 
 func reverse(vet []int) []int {
-	_ = vet
-	return nil
+	var reversedVet []int
+	for i := len(vet) - 1; i > -1; i-- {
+		reversedVet = append(reversedVet, vet[i])
+	}
+	return reversedVet
 }
 
 func unique(vet []int) []int {
-	_ = vet
-	return nil
+	freq := make(map[int]int)
+	var unicos []int
+	for _, value := range vet {
+		freq[value]++
+		if freq[value] == 1 {
+			unicos = append(unicos, value)
+		}
+	}
+	return unicos
 }
 
 func repeated(vet []int) []int {
-	_ = vet
-	return nil
+	freq := make(map[int]int)
+	var repetidos []int
+	for _, value := range vet {
+		freq[value]++
+		if freq[value] > 1 {
+			repetidos = append(repetidos, value)
+		}
+	}
+	return repetidos
 }
+
+// função auxiliar
+// func count(vet []int, e int) int {
+// 	count := 0
+// 	for _, value := range vet {
+// 		if value == e {
+// 			count++
+// 		}
+// 	}
+// 	return count
+// }
 
 func main() {
 	scanner := bufio.NewScanner(os.Stdin)
@@ -103,4 +155,3 @@ func str2vet(s string) []int {
 	}
 	return vet
 }
-

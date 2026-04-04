@@ -2,8 +2,243 @@
     "patches": [
         {
             "label": "2026-03-24_15-36-58",
-            "content": "package main\nimport \"fmt\"\nfunc main() {\n    fmt.Println(\"qxcode\")\n}\n",
+            "content": "@@ -6,16 +6,28 @@\n ge main%0A\n+import %22fmt%22\n %0Afunc ma\n@@ -37,133 +37,32 @@\n ) %7B%0A\n-%09var q int%0A%09var d string%0A%0A%09for i := range q %7B%0A%0A%09%7D%0A%0A%09if d == 'L' %7B%0A%0A%09%7D else if d == 'R' %7B%0A%0A%09%7D else if d == 'U' %7B%0A%0A%09%7D else %7B%0A%0A%09%7D\n+    fmt.Println(%22qxcode%22)\n %0A%7D%0A\n",
             "lines": "5"
+        },
+        {
+            "label": "2026-03-30_15-50-29",
+            "content": "@@ -11,22 +11,8 @@\n in%0A%0A\n-import %22fmt%22%0A%0A\n func\n@@ -50,171 +50,51 @@\n ing%0A\n-%09var xInt %5B%5Dint%0A%09var yInt %5B%5Dint%0A%09fmt.Scan(&d)%0A%0A%09for i := range q %7B%0A%09%09fmt.Scan(&xInt%5Bi%5D, &yInt%5Bi%5D)%0A%09%7D%0A%0A%09fmt.Println(xInt)%0A%09fmt.Println(yInt)%0A%0A%09// \n+%0A%09for i := range q %7B%0A%0A%09%7D%0A%0A%09\n if d ==\n-%22L%22\n+ 'L'\n  %7B%0A%0A%09\n-// \n %7D el\n@@ -108,19 +108,16 @@\n  == \n-%22R%22\n+'R'\n  %7B%0A%0A%09\n-// \n %7D el\n@@ -131,19 +131,16 @@\n  == \n-%22U%22\n+'U'\n  %7B%0A%0A%09\n-// \n %7D el\n@@ -150,11 +150,8 @@\n %7B%0A%0A%09\n-// \n %7D%0A%7D%0A\n",
+            "lines": "20"
+        },
+        {
+            "label": "2026-03-30_15-59-35",
+            "content": "@@ -150,21 +150,10 @@\n t%5Bi%5D\n-)%0A%09%09fmt.Scan(\n+, \n &yIn\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-30_16-00-09",
+            "content": "@@ -107,24 +107,11 @@\n an(&\n-q\n+d\n )%0A\n-%09fmt.Scan(&d)\n %0A%09fo\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-30_16-00-39",
+            "content": "@@ -163,10 +163,21 @@\n t%5Bi%5D\n-, \n+)%0A%09%09fmt.Scan(\n &yIn\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-30_16-00-58",
+            "content": "@@ -104,18 +104,28 @@\n .Scan(&q\n-, \n+)%0A%09fmt.Scan(\n &d)%0A%09for\n",
+            "lines": "28"
+        },
+        {
+            "label": "2026-03-30_16-01-35",
+            "content": "@@ -108,25 +108,14 @@\n n(&q\n-)%0A%09fmt.Scan(\n+, \n &d)%0A\n-%0A\n %09for\n",
+            "lines": "27"
+        },
+        {
+            "label": "2026-03-30_16-02-15",
+            "content": "@@ -65,81 +65,65 @@\n ng%0A%09\n-fmt.Scan(&q)%0A%09fmt.Scan(&d)%0A%09xInt := make(%5B%5Dint, q)%0A%09yInt := make(%5B%5Dint, q\n+var xInt %5B%5Dint%0A%09var yInt %5B%5Dint%0A%09fmt.Scan(&q)%0A%09fmt.Scan(&d\n )%0A%0A%09\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-30_16-03-54",
+            "content": "@@ -180,21 +180,10 @@\n t%5Bi%5D\n-)%0A%09%09fmt.Scan(\n+, \n &yIn\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-03-30_16-05-31",
+            "content": "@@ -93,44 +93,65 @@\n d)%0A%09\n-var \n xInt \n-%5B%5Dint%0A%09var yInt \n+:= make(%5B%5Dint, q)%0A%09yInt := make(\n %5B%5Dint\n+, q)\n %0A%0A%09for\n+ i :=\n  ran\n@@ -163,108 +163,46 @@\n %7B%0A%09%09\n-var a int%0A%09%09fmt.Scan(&a)%0A%09%09var b int%0A%09%09fmt.Scan(&b)%0A%09%09xInt = append(xInt, a)%0A%09%09xInt = append(xInt, b\n+fmt.Scan(&xInt%5Bi%5D)%0A%09%09fmt.Scan(&yInt%5Bi%5D\n )%0A%09%7D\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-03-30_16-07-16",
+            "content": "@@ -217,17 +217,17 @@\n t, a)%0A%09%09\n-y\n+x\n Int = ap\n@@ -231,17 +231,17 @@\n  append(\n-y\n+x\n Int, b)%0A\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-30_16-07-51",
+            "content": "@@ -25,44 +25,8 @@\n t%22%0A%0A\n-type Gomo struct %7B%0A%09x int%0A%09y int%0A%7D%0A%0A\n func\n@@ -97,20 +97,35 @@\n var \n-gomos %5B%5DGomo\n+xInt %5B%5Dint%0A%09var yInt %5B%5Dint%0A\n %0A%09fo\n@@ -196,103 +196,98 @@\n )%0A%09%09\n-gomoAdd := Gomo%7B%0A%09%09%09x: a,%0A%09%09%09y: b,%0A%09%09%7D%0A%09%09gomos = append(gomos, gomoAdd)%0A%09%7D%0A%0A%09fmt.Println(gomos)\n+xInt = append(xInt, a)%0A%09%09yInt = append(yInt, b)%0A%09%7D%0A%0A%09fmt.Println(xInt)%0A%09fmt.Println(yInt)%0A\n %0A%09//\n@@ -294,17 +294,16 @@\n  if d ==\n- \n %22L%22 %7B%0A%0A%09\n",
+            "lines": "34"
+        },
+        {
+            "label": "2026-03-31_16-48-49",
+            "content": "@@ -313,33 +313,8 @@\n os)%0A\n-%09fmt.Println(gomos%5B0%5D.x)%0A\n %09// \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-04_00-19-52",
+            "content": "@@ -294,38 +294,75 @@\n %7D%0A%0A%09\n-if d == %22L%22 %7B%0A%09%09gomos%5B0%5D.x--%0A%09\n+fmt.Println(gomos)%0A%09fmt.Println(gomos%5B0%5D.x)%0A%09// if d == %22L%22 %7B%0A%0A%09// \n %7D el\n@@ -382,24 +382,13 @@\n %22 %7B%0A\n-%09%09gomos%5B0%5D.x++%0A%09\n+%0A%09// \n %7D el\n@@ -408,95 +408,27 @@\n %22 %7B%0A\n-%09%09gomos%5B0%5D.y++%0A%09%7D else %7B%0A%09%09gomos%5B0%5D.y--%0A%09%7D%0A%0A%09fmt.Println(gomos)%0A%09fmt.Println(gomos%5B0%5D.x)\n+%0A%09// %7D else %7B%0A%0A%09// %7D\n %0A%7D%0A\n",
+            "lines": "39"
+        },
+        {
+            "label": "2026-04-04_00-21-51",
+            "content": "@@ -428,78 +428,25 @@\n %0A%0A%09f\n-or _, gomo := range gomos %7B%0A%09%09fmt.Printf(%22%25d %25d%5Cf%22, gomo.x, gomo.y)%0A%09%7D\n+mt.Println(gomos)\n %0A%09fm\n",
+            "lines": "40"
+        },
+        {
+            "label": "2026-04-04_00-27-18",
+            "content": "@@ -472,17 +472,17 @@\n (%22%25d %25d%5C\n-n\n+f\n %22, gomo.\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-04_00-27-25",
+            "content": "@@ -495,10 +495,35 @@\n o.y)%0A%09%7D%0A\n+%09fmt.Println(gomos%5B0%5D.x)%0A\n %7D%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-04_00-27-37",
+            "content": "@@ -404,20 +404,8 @@\n else\n- if d == %22D%22\n  %7B%0A%09\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-04_00-28-19",
+            "content": "@@ -390,18 +390,18 @@\n mos%5B0%5D.y\n---\n+++\n %0A%09%7D else\n@@ -427,18 +427,18 @@\n mos%5B0%5D.y\n-++\n+--\n %0A%09%7D%0A%0A%09fo\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-04_00-28-55",
+            "content": "@@ -294,29 +294,21 @@\n %7D%0A%0A%09\n-switch d %7B%0A%09case\n+if d ==\n  %22L%22\n-:\n+ %7B\n %0A%09%09g\n@@ -324,17 +324,28 @@\n --%0A%09\n-case\n+%7D else if d ==\n  %22R%22\n-:\n+ %7B\n %0A%09%09g\n@@ -361,17 +361,28 @@\n ++%0A%09\n-case\n+%7D else if d ==\n  %22U%22\n-:\n+ %7B\n %0A%09%09g\n@@ -398,17 +398,28 @@\n --%0A%09\n-case\n+%7D else if d ==\n  %22D%22\n-:\n+ %7B\n %0A%09%09g\n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-04-04_00-32-14",
+            "content": "@@ -150,13 +150,8 @@\n %09for\n- i :=\n  ran\n@@ -157,16 +157,16 @@\n nge q %7B%0A\n+\n %09%09var a \n@@ -215,165 +215,8 @@\n &b)%0A\n-%09%09if i != 0 %7B%0A%09%09%09a++%0A%09%09%09if d == %22L%22 %7C%7C d == %22D%22 && b != gomos%5B0%5D.y %7B%0A%09%09%09%09if b %3E gomos%5B0%5D.y %7B%0A%09%09%09%09%09b--%0A%09%09%09%09%7D else if b %3C gomos%5B0%5D.y %7B%0A%09%09%09%09%09b++%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D%0A\n %09%09go\n@@ -293,59 +293,8 @@\n %09%7D%0A%0A\n-%09//Modificando apenas a posi%C3%A7%C3%A3o da cabe%C3%A7a da cobra%0A\n %09swi\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-04_00-40-18",
+            "content": "@@ -243,17 +243,16 @@\n +%0A%09%09%09if \n-(\n d == %22L%22\n@@ -263,17 +263,16 @@\n d == %22D%22\n-)\n  && b !=\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-04_00-41-50",
+            "content": "@@ -230,16 +230,23 @@\n  != 0 %7B%0A\n+%09%09%09a++%0A\n %09%09%09if (d\n@@ -291,16 +291,8 @@\n y %7B%0A\n-%09%09%09%09a++%0A\n %09%09%09%09\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-04_00-45-14",
+            "content": "@@ -146,16 +146,21 @@\n omo%0A%09for\n+ i :=\n  range q\n@@ -162,16 +162,16 @@\n nge q %7B%0A\n-\n %09%09var a \n@@ -218,19 +218,16 @@\n n(&b)%0A%09%09\n-// \n if i != \n@@ -232,19 +232,16 @@\n = 0 %7B%0A%09%09\n-// \n %09if (d =\n@@ -286,19 +286,16 @@\n %7B%0A%09%09\n-// \n %09%09a++%0A%09%09\n // %09\n@@ -290,19 +290,16 @@\n %09%09a++%0A%09%09\n-// \n %09%09if b %3E\n@@ -310,27 +310,24 @@\n os%5B0%5D.y %7B%0A%09%09\n-// \n %09%09%09b--%0A%09%09// \n@@ -323,19 +323,16 @@\n %09%09b--%0A%09%09\n-// \n %09%09%7D else\n@@ -354,19 +354,16 @@\n %5D.y %7B%0A%09%09\n-// \n %09%09%09b++%0A%09\n@@ -367,36 +367,19 @@\n +%0A%09%09\n-// \n %09%09%7D%0A%09%09\n-// %09%7D else if%0A%09%09// \n+%09%7D%0A%09%09\n %7D%0A%09%09\n@@ -606,16 +606,16 @@\n se %22D%22:%0A\n+\n %09%09gomos%5B\n@@ -629,327 +629,8 @@\n %09%7D%0A%0A\n-%09for i, gomo := range gomos %7B%0A%09%09if i == 0 %7B%0A%09%09%09continue%0A%09%09%7D else %7B%0A%09%09%09if d == %22L%22 %7C%7C d == %22R%22 %7B%0A%09%09%09%09if gomo.y %3E gomos%5B0%5D.y %7B%0A%09%09%09%09%09gomo.y--%0A%09%09%09%09%7D else if gomo.y %3C gomos%5B0%5D.y %7B%0A%09%09%09%09%09gomo.y++%0A%09%09%09%09%7D%0A%09%09%09%7D else %7B%0A%09%09%09%09if gomo.x %3E gomos%5B0%5D.x %7B%0A%09%09%09%09%09gomo.x--%0A%09%09%09%09%7D else if gomo.x %3C gomos%5B0%5D.x %7B%0A%09%09%09%09%09gomo.x++%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A\n %09for\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-04-04_01-03-36",
+            "content": "@@ -692,66 +692,8 @@\n s %7B%0A\n-%09%09//Pula essa itera%C3%A7%C3%A3o porque j%C3%A1 foi atualizada no switch%0A\n %09%09if\n@@ -905,18 +905,18 @@\n %09%09gomo.x\n-++\n+--\n %0A%09%09%09%09%7D e\n@@ -951,26 +951,26 @@\n %0A%09%09%09%09%09gomo.x\n---\n+++\n %0A%09%09%09%09%7D%0A%09%09%09%7D%0A\n",
+            "lines": "73"
+        },
+        {
+            "label": "2026-04-04_01-06-50",
+            "content": "@@ -816,86 +816,8 @@\n %22 %7B%0A\n-%09%09%09%09if d == %22L%22 %7B%0A%09%09%09%09%09gomo.x--%0A%09%09%09%09%7D else if d == %22R%22 %7B%0A%09%09%09%09%09gomo.x++%0A%09%09%09%09%7D%0A%0A\n %09%09%09%09\n@@ -963,18 +963,18 @@\n %09%09gomo.x\n---\n+++\n %0A%09%09%09%09%7D e\n@@ -1009,26 +1009,26 @@\n %0A%09%09%09%09%09gomo.x\n-++\n+--\n %0A%09%09%09%09%7D%0A%09%09%09%7D%0A\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-04-04_01-09-46",
+            "content": "@@ -812,16 +812,94 @@\n = %22R%22 %7B%0A\n+%09%09%09%09if d == %22L%22 %7B%0A%09%09%09%09%09gomo.x--%0A%09%09%09%09%7D else if d == %22R%22 %7B%0A%09%09%09%09%09gomo.x++%0A%09%09%09%09%7D%0A%0A\n %09%09%09%09if g\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-04-04_01-17-27",
+            "content": "@@ -816,86 +816,8 @@\n %22 %7B%0A\n-%09%09%09%09if d == %22L%22 %7B%0A%09%09%09%09%09gomo.x--%0A%09%09%09%09%7D else if d == %22R%22 %7B%0A%09%09%09%09%09gomo.x++%0A%09%09%09%09%7D%0A%0A\n %09%09%09%09\n@@ -911,16 +911,127 @@\n +%0A%09%09%09%09%7D%0A\n+%09%09%09%7D else %7B%0A%09%09%09%09if gomo.x %3E gomos%5B0%5D.x %7B%0A%09%09%09%09%09gomo.x--%0A%09%09%09%09%7D else if gomo.x %3C gomos%5B0%5D.x %7B%0A%09%09%09%09%09gomo.x++%0A%09%09%09%09%7D%0A\n %09%09%09%7D%0A%09%09%7D\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-04-04_01-18-02",
+            "content": "@@ -993,119 +993,8 @@\n %09%09%7D%0A\n-%09%09%09%7D else %7B%0A%09%09%09%09if gomo.x %3E gomos%5B0%5D.x %7B%0A%09%09%09%09%09gomo.x--%0A%09%09%09%09%7D else if gomo.x %3C gomos%5B0%5D.x %7B%0A%09%09%09%09%09gomo.x++%0A%09%09%09%09%7D%0A\n %09%09%09%7D\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-04-04_01-18-14",
+            "content": "@@ -989,16 +989,127 @@\n +%0A%09%09%09%09%7D%0A\n+%09%09%09%7D else %7B%0A%09%09%09%09if gomo.x %3E gomos%5B0%5D.x %7B%0A%09%09%09%09%09gomo.x--%0A%09%09%09%09%7D else if gomo.x %3C gomos%5B0%5D.x %7B%0A%09%09%09%09%09gomo.x++%0A%09%09%09%09%7D%0A\n %09%09%09%7D%0A%09%09%7D\n",
+            "lines": "80"
+        },
+        {
+            "label": "2026-04-04_01-20-27",
+            "content": "@@ -852,126 +852,42 @@\n %09%09%09%09\n-%09fmt.Printf(%22Atualizou: %25d %22, gomo.x)%0A%09%09%09%09%7D else if d == %22R%22 %7B%0A%09%09%09%09%09gomo.x++%0A%09%09%09%09%09fmt.Printf(%22Atualizou: %25d %22, gomo.x)\n+%7D else if d == %22R%22 %7B%0A%09%09%09%09%09gomo.x++\n %0A%09%09%09\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-04-04_01-23-54",
+            "content": "@@ -866,34 +866,33 @@\n f(%22Atualizou: %25d\n-%5Cn\n+ \n %22, gomo.x)%0A%09%09%09%09%7D\n@@ -955,18 +955,17 @@\n izou: %25d\n-%5Cn\n+ \n %22, gomo.\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-04-04_01-24-19",
+            "content": "@@ -874,10 +874,8 @@\n izou\n- -\n : %25d\n@@ -956,10 +956,8 @@\n izou\n- +\n : %25d\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-04-04_01-24-44",
+            "content": "@@ -872,28 +872,24 @@\n alizou -\n-, %25d\n : %25d%5Cn%22,\n  i, gomo\n@@ -872,35 +872,32 @@\n alizou -: %25d%5Cn%22,\n- i,\n  gomo.x)%0A%09%09%09%09%7D e\n@@ -960,20 +960,16 @@\n ou +\n-, %25d\n : %25d%5Cn%22,\n  i, \n@@ -964,19 +964,16 @@\n : %25d%5Cn%22,\n- i,\n  gomo.x)\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-04-04_01-25-40",
+            "content": "@@ -831,36 +831,32 @@\n  %22L%22 %7B%0A%09%09%09%09%09gomo\n-s%5Bi%5D\n .x--%0A%09%09%09%09%09fmt.Pr\n@@ -934,16 +934,12 @@\n gomo\n-s%5Bi%5D.x--\n+.x++\n %0A%09%09%09\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-04-04_01-27-34",
+            "content": "@@ -888,36 +888,32 @@\n : %25d%5Cn%22, i, gomo\n-s%5Bi%5D\n .x)%0A%09%09%09%09%7D else i\n@@ -991,20 +991,16 @@\n  i, gomo\n-s%5Bi%5D\n .x)%0A%09%09%09%09\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-04-04_01-28-22",
+            "content": "@@ -845,35 +845,32 @@\n mos%5Bi%5D.x--%0A%09%09%09%09%09\n-// \n fmt.Printf(%22Atua\n@@ -952,19 +952,16 @@\n --%0A%09%09%09%09%09\n-// \n fmt.Prin\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-04-04_01-28-57",
+            "content": "@@ -802,154 +802,252 @@\n %22L%22 \n-%7B%0A%09%09%09%09if gomos%5B0%5D.y != gomo.y %7B%0A%09%09%09%09%09if gomo.y %3E \n+%7C%7C d == %22R%22 %7B%0A%09%09%09%09if d == %22L%22 %7B%0A%09%09%09%09%09\n gomos%5B\n-0%5D.y %7B\n+i%5D.x--\n %0A%09%09%09%09%09\n-%09gomo.y--%0A%09%09%09%09%09%7D else if gomo.y %3C \n+// fmt.Printf(%22Atualizou -, %25d: %25d%5Cn%22, i, gomos%5Bi%5D.x)%0A%09%09%09%09%7D else if d == %22R%22 %7B%0A%09%09%09%09%09\n gomos%5B\n-0%5D.y %7B\n+i%5D.x--\n %0A%09%09%09%09%09\n-%09gomo.y++%0A%09\n+// fmt.Printf(%22Atualizou +, %25d: %25d%5Cn%22, i, gomos%5Bi%5D.x)%0A\n %09%09%09%09%7D%0A\n+%0A\n %09%09%09%09\n-%7D else\n+if gomo.y %3E gomos%5B0%5D.y\n  %7B%0A%09\n@@ -1058,22 +1058,18 @@\n gomo\n-s%5Bi%5D.x\n+.y\n --%0A%09%09%09%09%7D\n %0A%09%09%09\n@@ -1064,21 +1064,16 @@\n --%0A%09%09%09%09%7D\n-%0A%09%09%09%7D\n  else if\n@@ -1077,27 +1077,39 @@\n  if \n-d == %22R%22\n+gomo.y %3C gomos%5B0%5D.y\n  %7B%0A\n+%09\n %09%09%09%09gomo\n s%5Bi%5D\n@@ -1100,32 +1100,34 @@\n  %7B%0A%09%09%09%09%09gomo\n-s%5Bi%5D.x--\n+.y++%0A%09%09%09%09%7D\n %0A%09%09%09%7D%0A%09%09%7D%0A%09%7D\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-04-04_01-33-43",
+            "content": "@@ -801,20 +801,8 @@\n  %22L%22\n- %7C%7C d == %22R%22\n  %7B%0A%09\n@@ -951,28 +951,8 @@\n e %7B%0A\n-%09%09%09%09%09if d == %22L%22 %7B%0A%09\n %09%09%09%09\n@@ -963,24 +963,28 @@\n os%5Bi%5D.x--%0A%09%09\n+%09%09%7D%0A\n %09%09%09%7D else if\n@@ -995,26 +995,24 @@\n = %22R%22 %7B%0A%09%09%09%09\n-%09%09\n gomos%5Bi%5D.x--\n@@ -1016,21 +1016,8 @@\n x--%0A\n-%09%09%09%09%09%7D%0A%09%09%09%09%7D%0A\n %09%09%09%7D\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-04-04_01-36-22",
+            "content": "@@ -882,20 +882,16 @@\n %09%09%09%09gomo\n-s%5Bi%5D\n .y--%0A%09%09%09\n@@ -934,20 +934,16 @@\n %09%09%09%09gomo\n-s%5Bi%5D\n .y++%0A%09%09%09\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-04-04_01-39-05",
+            "content": "@@ -1067,307 +1067,8 @@\n %09%09%7D%0A\n-%09%09%09%7D else %7B%0A%09%09%09%09if gomos%5B0%5D.x != gomo.x %7B%0A%09%09%09%09%09if gomo.y %3E gomos%5B0%5D.y %7B%0A%09%09%09%09%09%09gomos%5Bi%5D.y--%0A%09%09%09%09%09%7D else if gomo.y %3C gomos%5B0%5D.y %7B%0A%09%09%09%09%09%09gomos%5Bi%5D.y++%0A%09%09%09%09%09%7D%0A%09%09%09%09%09//Movimento que segue a cabe%C3%A7a%0A%09%09%09%09%7D else %7B%0A%09%09%09%09%09if d == %22U%22 %7B%0A%09%09%09%09%09%09gomos%5Bi%5D.y--%0A%09%09%09%09%09%7D else if d == %22D%22 %7B%0A%09%09%09%09%09%09gomos%5Bi%5D.y--%0A%09%09%09%09%09%7D%0A%09%09%09%09%7D%0A\n %09%09%09%7D\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-04-04_01-44-46",
+            "content": "@@ -1083,33 +1083,33 @@\n %09%09%09%09if gomos%5B0%5D.\n-y\n+x\n  != gomo.y %7B%0A%09%09%09\n@@ -1093,33 +1093,33 @@\n os%5B0%5D.x != gomo.\n-y\n+x\n  %7B%0A%09%09%09%09%09if gomo.\n@@ -1213,37 +1213,24 @@\n .y++%0A%09%09%09%09%09%7D%0A\n-%09%09%09%09%7D else %7B%0A\n %09%09%09%09%09//Movim\n@@ -1253,16 +1253,29 @@\n  cabe%C3%A7a%0A\n+%09%09%09%09%7D else %7B%0A\n %09%09%09%09%09if \n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-04-04_01-45-56",
+            "content": "@@ -1163,178 +1163,58 @@\n %09%09%09%09\n-%09fmt.Printf(%22Antigo:%25d Novo:%25d%5Cn%22, gomo.y, gomos%5Bi%5D.y)%0A%09%09%09%09%09%7D else if gomo.y %3C gomos%5B0%5D.y %7B%0A%09%09%09%09%09%09gomos%5Bi%5D.y++%0A%09%09%09%09%09%09fmt.Printf(%22Antigo:%25d Novo:%25d%5Cn%22, gomo.y, gomos%5Bi%5D.y)\n+%7D else if gomo.y %3C gomos%5B0%5D.y %7B%0A%09%09%09%09%09%09gomos%5Bi%5D.y++\n %0A%09%09%09\n",
+            "lines": "91"
+        },
+        {
+            "label": "2026-04-04_01-47-43",
+            "content": "@@ -1109,140 +1109,8 @@\n y %7B%0A\n-%09%09%09%09%09if gomos%5B0%5D.x != gomo.x %7B%0A%09%09%09%09%09%09if gomos%5B0%5D.x %3E gomo.x %7B%0A%09%09%09%09%09%09%09gomos%5Bi%5D.x++%0A%09%09%09%09%09%09%7D else %7B%0A%09%09%09%09%09%09%09gomos%5Bi%5D.x--%0A%09%09%09%09%09%09%7D%0A%09%09%09%09%09%7D%0A\n %09%09%09%09\n@@ -1156,27 +1156,24 @@\n %5D.y--%0A%09%09%09%09%09%09\n-// \n fmt.Printf(%22\n@@ -1276,19 +1276,16 @@\n +%0A%09%09%09%09%09%09\n-// \n fmt.Prin\n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-04-04_01-52-56",
+            "content": "@@ -1232,30 +1232,30 @@\n %09%09%09%09%7D%0A%09%09%09%09%09%7D\n- else \n+%0A%09%09%09%09%09\n if gomo.y %3E \n",
+            "lines": "100"
+        },
+        {
+            "label": "2026-04-04_01-53-15",
+            "content": "@@ -1105,32 +1105,164 @@\n omo.y %7B%0A%09%09%09%09%09if \n+gomos%5B0%5D.x != gomo.x %7B%0A%09%09%09%09%09%09if gomos%5B0%5D.x %3E gomo.x %7B%0A%09%09%09%09%09%09%09gomos%5Bi%5D.x++%0A%09%09%09%09%09%09%7D else %7B%0A%09%09%09%09%09%09%09gomos%5Bi%5D.x--%0A%09%09%09%09%09%09%7D%0A%09%09%09%09%09%7D else if \n gomo.y %3E gomos%5B0\n",
+            "lines": "99"
+        },
+        {
+            "label": "2026-04-04_01-54-50",
+            "content": "@@ -211,16 +211,214 @@\n can(&b)%0A\n+%09%09// if i != 0 %7B%0A%09%09// %09if (d == %22L%22 %7C%7C d == %22D%22) && b != gomos%5B0%5D.y %7B%0A%09%09// %09%09a++%0A%09%09// %09%09if b %3E gomos%5B0%5D.y %7B%0A%09%09// %09%09%09b--%0A%09%09// %09%09%7D else if b %3C gomos%5B0%5D.y %7B%0A%09%09// %09%09%09b++%0A%09%09// %09%09%7D%0A%09%09// %09%7D else if%0A%09%09// %7D%0A\n %09%09gomoAd\n@@ -491,75 +491,8 @@\n %09%7D%0A%0A\n-%09for i := len(gomos) - 1; i %3E 0; i-- %7B%0A%09%09gomos%5Bi%5D = gomos%5Bi-1%5D%0A%09%7D%0A%0A\n %09//M\n@@ -658,16 +658,859 @@\n y++%0A%09%7D%0A%0A\n+%09for i, gomo := range gomos %7B%0A%09%09//Pula essa itera%C3%A7%C3%A3o porque j%C3%A1 foi atualizada no switch%0A%09%09if i == 0 %7B%0A%09%09%09continue%0A%09%09%7D else %7B%0A%09%09%09if d == %22L%22 %7C%7C d == %22R%22 %7B%0A%09%09%09%09if gomos%5B0%5D.y != gomo.y %7B%0A%09%09%09%09%09if gomo.y %3E gomos%5B0%5D.y %7B%0A%09%09%09%09%09%09gomos%5Bi%5D.y--%0A%09%09%09%09%09%7D else if gomo.y %3C gomos%5B0%5D.y %7B%0A%09%09%09%09%09%09gomos%5Bi%5D.y++%0A%09%09%09%09%09%7D%0A%09%09%09%09%7D else %7B%0A%09%09%09%09%09if d == %22L%22 %7B%0A%09%09%09%09%09%09gomos%5Bi%5D.x--%0A%09%09%09%09%09%7D else if d == %22R%22 %7B%0A%09%09%09%09%09%09gomos%5Bi%5D.x--%0A%09%09%09%09%09%7D%0A%09%09%09%09%7D%0A%09%09%09%7D else %7B%0A%09%09%09%09if gomos%5B0%5D.y != gomo.y %7B%0A%09%09%09%09%09if gomo.y %3E gomos%5B0%5D.y %7B%0A%09%09%09%09%09%09gomos%5Bi%5D.y--%0A%09%09%09%09%09%09// fmt.Printf(%22Antigo:%25d Novo:%25d%5Cn%22, gomo.y, gomos%5Bi%5D.y)%0A%09%09%09%09%09%7D else if gomo.y %3C gomos%5B0%5D.y %7B%0A%09%09%09%09%09%09gomos%5Bi%5D.y++%0A%09%09%09%09%09%09// fmt.Printf(%22Antigo:%25d Novo:%25d%5Cn%22, gomo.y, gomos%5Bi%5D.y)%0A%09%09%09%09%09%7D%0A%09%09%09%09%7D else %7B%0A%09%09%09%09%09//Movimento que segue a cabe%C3%A7a%0A%09%09%09%09%09if d == %22U%22 %7B%0A%09%09%09%09%09%09gomos%5Bi%5D.y--%0A%09%09%09%09%09%7D else if d == %22D%22 %7B%0A%09%09%09%09%09%09gomos%5Bi%5D.y--%0A%09%09%09%09%09%7D%0A%09%09%09%09%7D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%0A\n %09for _, \n",
+            "lines": "93"
+        },
+        {
+            "label": "2026-04-04_01-59-30",
+            "content": "package main\n\nimport \"fmt\"\n\ntype Gomo struct {\n\tx int\n\ty int\n}\n\nfunc main() {\n\tvar q int\n\tvar d string\n\tfmt.Scan(&q)\n\tfmt.Scan(&d)\n\tvar gomos []Gomo\n\tfor range q {\n\t\tvar a int\n\t\tfmt.Scan(&a)\n\t\tvar b int\n\t\tfmt.Scan(&b)\n\t\tgomoAdd := Gomo{\n\t\t\tx: a,\n\t\t\ty: b,\n\t\t}\n\t\tgomos = append(gomos, gomoAdd)\n\t}\n\n\tfor i := len(gomos) - 1; i > 0; i-- {\n\t\tgomos[i] = gomos[i-1]\n\t}\n\n\t//Modificando apenas a posi\u00e7\u00e3o da cabe\u00e7a da cobra\n\tswitch d {\n\tcase \"L\":\n\t\tgomos[0].x--\n\tcase \"R\":\n\t\tgomos[0].x++\n\tcase \"U\":\n\t\tgomos[0].y--\n\tcase \"D\":\n\t\tgomos[0].y++\n\t}\n\n\tfor _, gomo := range gomos {\n\t\tfmt.Printf(\"%d %d\\n\", gomo.x, gomo.y)\n\t}\n}\n",
+            "lines": "47"
         }
     ]
 }
