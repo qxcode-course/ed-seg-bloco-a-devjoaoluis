@@ -47,3 +47,37 @@
 2026-04-04 01:59:30, EXEC, v:1, k:ed@gomos, mode:FULL, rate:100, size:47
 2026-04-04 01:59:37, MOVE, v:1, k:ed@gomos, mode:BACK
 2026-04-04 02:00:46, SELF, v:1, k:ed@gomos, self:1, rate:100, study:100, concept:1, refactor:1
+2026-04-04 02:05:52, MOVE, v:1, k:ed@princesa, mode:PICK
+2026-04-04 02:05:53, EXEC, v:1, k:ed@princesa, mode:FREE
+2026-04-04 02:06:09, EXEC, v:1, k:ed@princesa, mode:FULL, rate:0
+2026-04-04 02:07:13, MOVE, v:1, k:ed@princesa, mode:BACK
+2026-04-04 15:22:28, MOVE, v:1, k:ed@apagando, mode:PICK
+2026-04-04 15:22:30, EXEC, v:1, k:ed@apagando, mode:FREE, size:29
+2026-04-04 15:25:23, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0, size:30
+2026-04-04 15:44:50, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0, size:36
+2026-04-04 15:45:15, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0, size:36
+2026-04-04 15:48:27, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0, size:25
+2026-04-04 15:48:48, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0, size:26
+2026-04-04 15:58:22, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0, size:42
+2026-04-04 15:58:46, EXEC, v:1, k:ed@apagando, mode:FULL, size:38, fail:COMP
+2026-04-04 15:58:53, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0, size:38
+2026-04-04 15:58:58, EXEC, v:1, k:ed@apagando, mode:FULL, rate:0, size:38
+2026-04-04 15:59:26, EXEC, v:1, k:ed@apagando, mode:FULL, rate:100, size:42
+2026-04-04 16:00:37, MOVE, v:1, k:ed@apagando, mode:BACK
+2026-04-04 16:01:01, SELF, v:1, k:ed@apagando, self:1, rate:100, study:50
+2026-04-04 16:01:41, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-04-04 16:01:42, EXEC, v:1, k:ed@especiais, mode:FREE, size:132
+2026-04-04 16:22:50, MOVE, v:1, k:ed@especiais, mode:BACK
+2026-04-04 17:44:58, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-04-04 18:11:17, MOVE, v:1, k:ed@especiais, mode:BACK
+2026-04-04 18:58:15, MOVE, v:1, k:ed@especiais, mode:PICK
+2026-04-04 18:58:16, EXEC, v:1, k:ed@especiais, mode:FULL, rate:0
+2026-04-04 18:58:21, EXEC, v:1, k:ed@especiais, mode:FULL, rate:0, size:152
+2026-04-04 18:59:57, EXEC, v:1, k:ed@especiais, mode:FULL, rate:0, size:152
+2026-04-04 19:08:00, EXEC, v:1, k:ed@especiais, mode:FULL, rate:12, size:163
+2026-04-04 19:16:51, EXEC, v:1, k:ed@especiais, mode:FULL, rate:12, size:181
+2026-04-04 19:22:43, MOVE, v:1, k:ed@especiais, mode:BACK
+2026-04-04 19:23:13, MOVE, v:1, k:ed@buscas, mode:PICK
+2026-04-04 19:23:14, MOVE, v:1, k:ed@buscas, mode:BACK
+2026-04-04 19:23:18, MOVE, v:1, k:ed@buscas, mode:PICK
+2026-04-04 19:23:22, MOVE, v:1, k:ed@buscas, mode:BACK

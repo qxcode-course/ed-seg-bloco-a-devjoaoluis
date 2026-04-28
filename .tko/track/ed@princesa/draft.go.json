@@ -117,8 +117,38 @@
         },
         {
             "label": "2026-03-31_19-54-28",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n int\n\tvar e int\n\tvar elementos []int\n\tfmt.Scan(&n, &e)\n\n\t//adi\u00e7\u00e3o dos elementos\n\tfor i := 1; i < n+1; i++ {\n\t\telementos = append(elementos, i)\n\t}\n\n\tfor {\n\t\tif len(elementos) == 1 {\n\t\t\tbreak\n\t\t} else {\n\t\t\tprintFormatado(elementos, e)\n\t\t\tmatarProximo(elementos, e)\n\t\t\te = proxKiller(elementos, e)\n\t\t\tbreak\n\t\t}\n\t}\n}\n\nfunc proxKiller(arr []int, antigo int) int {\n\tvar killer int\n\tfor ind, value := range arr {\n\t\tif value == antigo {\n\t\t\tkiller = ind + 1\n\t\t\tif killer != 0 {\n\t\t\t\treturn killer % (len(arr))\n\t\t\t}\n\t\t}\n\t}\n\treturn killer\n}\n\n// fun\u00e7\u00e3o feita para printar no formato que a quest\u00e3o pede\nfunc printFormatado(arr []int, esc int) {\n\tfmt.Print(\"[ \")\n\tfor _, num := range arr {\n\t\tif num == esc {\n\t\t\tfmt.Printf(\"%d> \", num)\n\t\t} else {\n\t\t\tfmt.Printf(\"%d \", num)\n\t\t}\n\t}\n\tfmt.Printf(\"]\\n\")\n}\n\nfunc matarProximo(arr []int, esc int) []int {\n\tvar killerInd int\n\tmatar := 0\n\tfor index, value := range arr {\n\t\tif value == 0 {\n\t\t\tcontinue\n\t\t}\n\n\t\tif value == esc {\n\t\t\tkillerInd = index\n\t\t\tmatar = killerInd + 1\n\t\t}\n\n\t\tif matar >= len(arr)-1 {\n\t\t\tmatar = matar % (len(arr) - 1)\n\t\t}\n\t\tarr[matar] = 0\n\t}\n\treturn arr\n\t// index := 0\n\t// if len(arr) == 1 {\n\t// \treturn arr\n\t// } else {\n\t// \tfor ind, value := range arr {\n\t// \t\tif value == 0 {\n\t// \t\t\tcontinue\n\t// \t\t}\n\t// \t\ttam := len(arr)\n\t// \t\tif value == esc {\n\t// \t\t\tindex = ind + 1\n\t// \t\t\tif index > len(arr)-1 {\n\t// \t\t\t\tindex = index%tam - 1\n\t// \t\t\t}\n\t// \t\t\tarr[index] = 0\n\t// \t\t\tbreak\n\t// \t\t}\n\t// \t}\n\t// }\n\t// return arr\n}\n",
+            "content": "@@ -193,24 +193,18 @@\n %7D%0A%0A%09\n-p := e - 1%0A%0A%09for\n+for %7B%0A%09%09if\n  len\n@@ -219,14 +219,36 @@\n os) \n-%3E\n+==\n  1 %7B%0A\n+%09%09%09break%0A%09%09%7D else %7B%0A%09\n %09%09pr\n@@ -275,36 +275,26 @@\n os, \n-p)%0A%0A\n+e)%0A%09\n %09%09matar\n- := (p + 1) %25 len\n+Proximo\n (ele\n@@ -303,113 +303,64 @@\n ntos\n+, e\n )%0A%09%09\n-elementos = append(elementos%5B:matar%5D, elementos%5Bmatar+1:%5D...)%0A%09%09p = matar %25 len(elementos)%0A\n+%09e = proxKiller(elementos, e)%0A%09%09%09break%0A%09\n %09%7D%0A\n+%09%7D\n %0A%7D%0A%0A\n-// \n func\n@@ -396,27 +396,24 @@\n  int) int %7B%0A\n-// \n %09var killer \n@@ -416,19 +416,16 @@\n ler int%0A\n-// \n %09for ind\n@@ -439,35 +439,32 @@\n  := range arr %7B%0A\n-// \n %09%09if value == an\n@@ -470,19 +470,16 @@\n ntigo %7B%0A\n-// \n %09%09%09kille\n@@ -490,19 +490,16 @@\n ind + 1%0A\n-// \n %09%09%09if ki\n@@ -510,19 +510,16 @@\n  != 0 %7B%0A\n-// \n %09%09%09%09retu\n@@ -545,32 +545,20 @@\n r))%0A\n-// \n %09%09%09%7D%0A\n-// \n %09%09%7D%0A\n-// %09%7D%0A// \n+%09%7D%0A\n %09ret\n@@ -568,19 +568,16 @@\n  killer%0A\n-// \n %7D%0A%0A// fu\n@@ -827,19 +827,16 @@\n %5Cn%22)%0A%7D%0A%0A\n-// \n func mat\n@@ -873,19 +873,16 @@\n %5B%5Dint %7B%0A\n-// \n %09var kil\n@@ -892,19 +892,16 @@\n Ind int%0A\n-// \n %09matar :\n@@ -904,19 +904,16 @@\n ar := 0%0A\n-// \n %09for ind\n@@ -937,19 +937,16 @@\n e arr %7B%0A\n-// \n %09%09if val\n@@ -955,19 +955,16 @@\n  == 0 %7B%0A\n-// \n %09%09%09conti\n@@ -967,27 +967,21 @@\n ontinue%0A\n-// \n %09%09%7D%0A%0A\n-// \n %09%09if val\n@@ -992,19 +992,16 @@\n = esc %7B%0A\n-// \n %09%09%09kille\n@@ -1013,19 +1013,16 @@\n = index%0A\n-// \n %09%09%09matar\n@@ -1042,19 +1042,13 @@\n + 1%0A\n-// \n %09%09%7D%0A%0A\n-// \n %09%09if\n@@ -1070,19 +1070,16 @@\n rr)-1 %7B%0A\n-// \n %09%09%09matar\n@@ -1108,45 +1108,391 @@\n  1)%0A\n-// %09%09%7D%0A// %09%09arr%5Bmatar%5D = 0%0A\n+%09%09%7D%0A%09%09arr%5Bmatar%5D = 0%0A%09%7D%0A%09return arr%0A%09// index := 0%0A%09// if len(arr) == 1 %7B%0A%09// %09return arr%0A%09// %7D else %7B%0A%09// %09for ind, value := range arr %7B%0A%09// %09%09if value == 0 %7B%0A%09// %09%09%09continue%0A%09// %09%09%7D%0A%09// %09%09tam := len(arr)%0A%09// %09%09if value == esc %7B%0A%09// %09%09%09index = ind + 1%0A%09// %09%09%09if index %3E len(arr)-1 %7B%0A%09// %09%09%09%09index = index%25tam - 1%0A%09// %09%09%09%7D%0A%09// %09%09%09arr%5Bindex%5D = 0%0A%09// %09%09%09break%0A%09\n // %09\n+%09\n %7D%0A\n+%09\n // %09\n+%7D%0A%09// %7D%0A%09// \n retu\n@@ -1498,14 +1498,10 @@\n urn arr%0A\n-%0A// \n %7D%0A\n",
             "lines": "93"
+        },
+        {
+            "label": "2026-04-05_00-17-55",
+            "content": "@@ -396,39 +396,8 @@\n %09%7D%0A%0A\n-%09printFormatado(elementos, p)%0A%0A\n %7D%0A%0A/\n",
+            "lines": "74"
+        },
+        {
+            "label": "2026-04-05_00-18-43",
+            "content": "@@ -195,16 +195,20 @@\n %0A%09p := e\n+ - 1\n %0A%0A%09for l\n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-04-05_00-19-02",
+            "content": "@@ -195,20 +195,16 @@\n %0A%09p := e\n- + 1\n %0A%0A%09for l\n@@ -254,16 +254,17 @@\n tos, p)%0A\n+%0A\n %09%09matar \n",
+            "lines": "76"
+        },
+        {
+            "label": "2026-04-05_00-21-05",
+            "content": "@@ -196,17 +196,17 @@\n %09p := e \n--\n++\n  1%0A%0A%09for\n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-04-05_00-21-27",
+            "content": "@@ -800,17 +800,17 @@\n %22)%0A%09for \n-i\n+_\n , num :=\n@@ -827,17 +827,19 @@\n  %7B%0A%09%09if \n-i\n+num\n  == esc \n",
+            "lines": "75"
+        },
+        {
+            "label": "2026-04-05_00-23-13",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar n int\n\tvar e int\n\tvar elementos []int\n\tfmt.Scan(&n, &e)\n\n\t//adi\u00e7\u00e3o dos elementos\n\tfor i := 1; i < n+1; i++ {\n\t\telementos = append(elementos, i)\n\t}\n\n\tp := e - 1\n\n\tfor len(elementos) > 1 {\n\t\tprintFormatado(elementos, p)\n\t\tmatar := (p + 1) % len(elementos)\n\t\telementos = append(elementos[:matar], elementos[matar+1:]...)\n\t\tp = matar % len(elementos)\n\t}\n\n\tprintFormatado(elementos, p)\n\n}\n\n// func proxKiller(arr []int, antigo int) int {\n// \tvar killer int\n// \tfor ind, value := range arr {\n// \t\tif value == antigo {\n// \t\t\tkiller = ind + 1\n// \t\t\tif killer != 0 {\n// \t\t\t\treturn killer % (len(arr))\n// \t\t\t}\n// \t\t}\n// \t}\n// \treturn killer\n// }\n\n// fun\u00e7\u00e3o feita para printar no formato que a quest\u00e3o pede\nfunc printFormatado(arr []int, esc int) {\n\tfmt.Print(\"[ \")\n\tfor i, num := range arr {\n\t\tif i == esc {\n\t\t\tfmt.Printf(\"%d> \", num)\n\t\t} else {\n\t\t\tfmt.Printf(\"%d \", num)\n\t\t}\n\t}\n\tfmt.Printf(\"]\\n\")\n}\n\n// func matarProximo(arr []int, esc int) []int {\n// \tvar killerInd int\n// \tmatar := 0\n// \tfor index, value := range arr {\n// \t\tif value == 0 {\n// \t\t\tcontinue\n// \t\t}\n\n// \t\tif value == esc {\n// \t\t\tkillerInd = index\n// \t\t\tmatar = killerInd + 1\n// \t\t}\n\n// \t\tif matar >= len(arr)-1 {\n// \t\t\tmatar = matar % (len(arr) - 1)\n// \t\t}\n// \t\tarr[matar] = 0\n// \t}\n// \treturn arr\n\n// }\n",
+            "lines": "75"
         }
     ]
 }

@@ -13,36 +13,39 @@ func main() {
 		elementos = append(elementos, i)
 	}
 
-	for {
-		if len(elementos) == 1 {
-			break
-		} else {
-			printFormatado(elementos, e)
-			matarProximo(elementos, e)
-			e = proxKiller(elementos, e)
-			break
-		}
+	//Como o
+	p := e - 1
+
+	//Abordagem 2
+	for len(elementos) > 1 {
+		printFormatado(elementos, p)
+		matar := (p + 1) % len(elementos)
+		elementos = append(elementos[:matar], elementos[matar+1:]...)
+		p = matar % len(elementos)
 	}
+
+	printFormatado(elementos, p)
+
 }
 
-func proxKiller(arr []int, antigo int) int {
-	var killer int
-	for ind, value := range arr {
-		if value == antigo {
-			killer = ind + 1
-			if killer != 0 {
-				return killer % (len(arr))
-			}
-		}
-	}
-	return killer
-}
+// func proxKiller(arr []int, antigo int) int {
+// 	var killer int
+// 	for ind, value := range arr {
+// 		if value == antigo {
+// 			killer = ind + 1
+// 			if killer != 0 {
+// 				return killer % (len(arr))
+// 			}
+// 		}
+// 	}
+// 	return killer
+// }
 
 // função feita para printar no formato que a questão pede
 func printFormatado(arr []int, esc int) {
 	fmt.Print("[ ")
-	for _, num := range arr {
-		if num == esc {
+	for i, num := range arr {
+		if i == esc {
 			fmt.Printf("%d> ", num)
 		} else {
 			fmt.Printf("%d ", num)
@@ -51,43 +54,24 @@ func printFormatado(arr []int, esc int) {
 	fmt.Printf("]\n")
 }
 
-func matarProximo(arr []int, esc int) []int {
-	var killerInd int
-	matar := 0
-	for index, value := range arr {
-		if value == 0 {
-			continue
-		}
+// func matarProximo(arr []int, esc int) []int {
+// 	var killerInd int
+// 	matar := 0
+// 	for index, value := range arr {
+// 		if value == 0 {
+// 			continue
+// 		}
 
-		if value == esc {
-			killerInd = index
-			matar = killerInd + 1
-		}
+// 		if value == esc {
+// 			killerInd = index
+// 			matar = killerInd + 1
+// 		}
 
-		if matar >= len(arr)-1 {
-			matar = matar % (len(arr) - 1)
-		}
-		arr[matar] = 0
-	}
-	return arr
-	// index := 0
-	// if len(arr) == 1 {
-	// 	return arr
-	// } else {
-	// 	for ind, value := range arr {
-	// 		if value == 0 {
-	// 			continue
-	// 		}
-	// 		tam := len(arr)
-	// 		if value == esc {
-	// 			index = ind + 1
-	// 			if index > len(arr)-1 {
-	// 				index = index%tam - 1
-	// 			}
-	// 			arr[index] = 0
-	// 			break
-	// 		}
-	// 	}
-	// }
-	// return arr
-}
+// 		if matar >= len(arr)-1 {
+// 			matar = matar % (len(arr) - 1)
+// 		}
+// 		arr[matar] = 0
+// 	}
+// 	return arr
+
+// }

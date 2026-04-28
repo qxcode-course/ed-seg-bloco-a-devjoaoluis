@@ -11,19 +11,32 @@ func main() {
 		fmt.Scan(&numeros[i])
 	}
 
+	//Mapa dos que serão apagados
 	fmt.Scan(&n)
-	apaga := make(map[int]int)
-
-	for i := 1; i < n+1; i++ {
-		fmt.Scan(&m)
-		apaga[m] = m
+	apagar := make(map[int]int, n)
+	for range n {
+		var num int
+		fmt.Scan(&num)
+		apagar[num] = num
 	}
 
-	for index, value := range numeros {
-
+	var apagados []int
+	for _, val := range numeros {
+		if val == apagar[val] {
+			continue
+		} else {
+			apagados = append(apagados, val)
+		}
 	}
+	printFormatado(apagados)
+}
 
-	fmt.Println(numeros)
-	fmt.Println(apaga)
-
+func printFormatado(arr []int) {
+	for i, val := range arr {
+		if i != len(arr)-1 {
+			fmt.Printf("%d ", val)
+		} else {
+			fmt.Printf("%d \n", val)
+		}
+	}
 }

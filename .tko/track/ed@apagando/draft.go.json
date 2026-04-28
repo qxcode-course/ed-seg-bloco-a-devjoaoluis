@@ -7,8 +7,63 @@
         },
         {
             "label": "2026-03-30_16-38-41",
-            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar m, n int\n\tfmt.Scan(&m)\n\tnumeros := make([]int, m)\n\t// le os numeros\n\tfor i := range m {\n\t\tfmt.Scan(&numeros[i])\n\t}\n\n\tfmt.Scan(&n)\n\tapaga := make([]int, n)\n\n\tfor i := range n {\n\t\tfmt.Scan(&apaga[i])\n\t}\n\n\tfmt.Println(numeros)\n\tfmt.Println(apaga)\n\n}\n",
+            "content": "@@ -189,19 +189,16 @@\n ake(\n-map%5Bint%5Dint\n+%5B%5Dint, n\n )%0A%0A%09\n@@ -210,23 +210,15 @@\n  := \n-1; i %3C n+1; i++\n+range n\n  %7B%0A%09\n@@ -232,67 +232,17 @@\n an(&\n-m)%0A%09%09\n apaga%5B\n-m%5D = m%0A%09%7D%0A%0A%09for index, value := range numeros %7B%0A\n+i%5D)\n %0A%09%7D%0A\n",
             "lines": "24"
+        },
+        {
+            "label": "2026-04-04_15-22-30",
+            "content": "@@ -259,38 +259,15 @@\n %5D = \n-1\n+m\n %0A%09%7D%0A%0A%09\n-fmt.Println(apaga)%0A%09// \n for \n@@ -300,19 +300,16 @@\n ros %7B%0A%0A%09\n-// \n %7D%0A%0A%09fmt.\n",
+            "lines": "29"
+        },
+        {
+            "label": "2026-04-04_15-25-22",
+            "content": "@@ -160,114 +160,8 @@\n %09%7D%0A%0A\n-%09//Converte para map%0A%09var numerosMap map%5Bint%5Dint%0A%09for _, val := range numeros %7B%0A%09%09numerosMap%5Bval%5D = 1%0A%09%7D%0A%0A\n %09fmt\n@@ -171,19 +171,16 @@\n an(&n)%0A%09\n-// \n apaga :=\n@@ -200,19 +200,16 @@\n %5Dint)%0A%0A%09\n-// \n for i :=\n@@ -228,19 +228,16 @@\n  i++ %7B%0A%09\n-// \n %09fmt.Sca\n@@ -243,19 +243,16 @@\n an(&m)%0A%09\n-// \n %09apaga%5Bm\n@@ -262,18 +262,12 @@\n  1%0A%09\n-// \n %7D%0A%0A%09\n-// \n fmt.\n@@ -368,18 +368,13 @@\n tln(\n-numerosMap\n+apaga\n )%0A%0A%7D\n",
+            "lines": "30"
+        },
+        {
+            "label": "2026-04-04_15-44-50",
+            "content": "@@ -178,16 +178,20 @@\n ra map%0A%09\n+var \n numerosM\n@@ -193,24 +193,16 @@\n erosMap \n-:= make(\n map%5Bint%5D\n@@ -204,20 +204,16 @@\n %5Bint%5Dint\n-, m)\n %0A%09for _,\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-04_15-45-15",
+            "content": "@@ -163,35 +163,118 @@\n %0A%09//\n-Mapa dos que ser%C3%A3o apagados\n+Converte para map%0A%09numerosMap := make(map%5Bint%5Dint, m)%0A%09for _, val := range numeros %7B%0A%09%09numerosMap%5Bval%5D = 1%0A%09%7D%0A\n %0A%09fm\n@@ -285,22 +285,24 @@\n an(&n)%0A%09\n+// \n apaga\n-r\n  := make\n@@ -317,63 +317,153 @@\n %5Dint\n-, n)%0A%09for range n %7B%0A%09%09var num int%0A%09%09apagar%5Bnum%5D = num%0A%09\n+)%0A%0A%09// for i := 1; i %3C n+1; i++ %7B%0A%09// %09fmt.Scan(&m)%0A%09// %09apaga%5Bm%5D = 1%0A%09// %7D%0A%0A%09// fmt.Println(apaga)%0A%09// for index, value := range numeros %7B%0A%0A%09// \n %7D%0A%0A%09\n@@ -500,14 +500,18 @@\n tln(\n-apagar\n+numerosMap\n )%0A%0A%7D\n",
+            "lines": "36"
+        },
+        {
+            "label": "2026-04-04_15-48-27",
+            "content": "@@ -266,25 +266,8 @@\n int%0A\n-%09%09fmt.Scan(&num)%0A\n %09%09ap\n",
+            "lines": "25"
+        },
+        {
+            "label": "2026-04-04_15-48-48",
+            "content": "@@ -308,301 +308,29 @@\n %7D%0A%0A%09\n-var apagados %5B%5Dint%0A%09for _, val := range numeros %7B%0A%09%09if val == apagar%5Bval%5D %7B%0A%09%09%09continue%0A%09%09%7D else %7B%0A%09%09%09apagados = append(apagados, val)%0A%09%09%7D%0A%09%7D%0A%09printFormatado(apagados)%0A%7D%0A%0Afunc printFormatado(arr %5B%5Dint) %7B%0A%09for i, val := range arr %7B%0A%09%09if i != len(arr)-1 %7B%0A%09%09%09fmt.Printf(%22%25d %22, val)%0A%09%09%7D else %7B%0A%09%09\n+fmt.Println(numeros)%0A\n %09fmt\n@@ -342,18 +342,15 @@\n tln(\n-val)%0A%09%09%7D%0A%09%7D\n+apagar)%0A\n %0A%7D%0A\n",
+            "lines": "26"
+        },
+        {
+            "label": "2026-04-04_15-58-22",
+            "content": "@@ -541,30 +541,89 @@\n %7B%0A%09%09\n-fmt.Printf(%22%25d %22, val)\n+if i != len(arr)-1 %7B%0A%09%09%09fmt.Printf(%22%25d %22, val)%0A%09%09%7D else %7B%0A%09%09%09fmt.Println(val)%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "42"
+        },
+        {
+            "label": "2026-04-04_15-58-46",
+            "content": "@@ -512,16 +512,19 @@\n ) %7B%0A%09for\n+ i,\n  val := \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-04_15-58-53",
+            "content": "@@ -508,27 +508,24 @@\n %5Dint) %7B%0A%09for\n- _,\n  val := rang\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-04_15-58-58",
+            "content": "@@ -513,17 +513,17 @@\n  %7B%0A%09for \n-i\n+_\n , val :=\n@@ -541,97 +541,30 @@\n %7B%0A%09%09\n-if i != len(arr)-1 %7B%0A%09%09%09fmt.Printf(%22%25d %22, val)%0A%09%09%7D else %7B%0A%09%09%09fmt.Printf(%22%25d %5Cn%22, val)%0A%09%09%7D\n+fmt.Printf(%22%25d %22, val)\n %0A%09%7D%0A\n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-04-04_15-59-26",
+            "content": "package main\n\nimport \"fmt\"\n\nfunc main() {\n\tvar m, n int\n\tfmt.Scan(&m)\n\tnumeros := make([]int, m)\n\t// le os numeros\n\tfor i := range m {\n\t\tfmt.Scan(&numeros[i])\n\t}\n\n\t//Mapa dos que ser\u00e3o apagados\n\tfmt.Scan(&n)\n\tapagar := make(map[int]int, n)\n\tfor range n {\n\t\tvar num int\n\t\tfmt.Scan(&num)\n\t\tapagar[num] = num\n\t}\n\n\tvar apagados []int\n\tfor _, val := range numeros {\n\t\tif val == apagar[val] {\n\t\t\tcontinue\n\t\t} else {\n\t\t\tapagados = append(apagados, val)\n\t\t}\n\t}\n\tprintFormatado(apagados)\n}\n\nfunc printFormatado(arr []int) {\n\tfor i, val := range arr {\n\t\tif i != len(arr)-1 {\n\t\t\tfmt.Printf(\"%d \", val)\n\t\t} else {\n\t\t\tfmt.Printf(\"%d \\n\", val)\n\t\t}\n\t}\n}\n",
+            "lines": "42"
         }
     ]
 }

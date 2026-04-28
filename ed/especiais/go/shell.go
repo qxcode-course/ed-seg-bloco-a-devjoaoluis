@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"math"
 	"os"
 	"strconv"
 	"strings"
@@ -13,14 +14,74 @@ type Pair struct {
 	Two int
 }
 
+func sortPair(vet []Pair) []Pair {
+	for i := range vet {
+		for j := 0; j < len(vet)-1-i; j++ {
+			if vet[j].One > vet[j+1].One {
+				vet[j], vet[j+1] = vet[j+1], vet[j]
+			}
+		}
+	}
+	return vet
+}
+
+func sort(vet []int) []int {
+	for i := range vet {
+		for j := 0; j < len(vet)-1-i; j++ {
+			if vet[j] > vet[j+1] {
+				vet[j], vet[j+1] = vet[j+1], vet[j]
+			}
+		}
+	}
+	return vet
+}
+
 func occurr(vet []int) []Pair {
-	_ = vet
-	return nil
+
+	frequencia := make(map[int]int)
+
+	//O mapa é usado para usar o valor único da chave e valor como frequência
+	for _, value := range vet {
+		valor := math.Abs(float64(value))
+		valorInt := int(valor)
+		frequencia[valorInt]++
+	}
+
+	ocorrencias := make([]Pair, 0)
+
+	for chave, value := range frequencia {
+		par := Pair{
+			One: chave,
+			Two: value,
+		}
+		ocorrencias = append(ocorrencias, par)
+	}
+
+	return sortPair(ocorrencias)
 }
 
 func teams(vet []int) []Pair {
-	_ = vet
-	return nil
+	pares := make([]Pair, 0)
+
+	if len(vet) == 1 {
+		adicionar := Pair{
+			One: vet[0],
+			Two: 1,
+		}
+		pares = append(pares, adicionar)
+	}
+
+	for i := 0; i < len(vet)-1; i++ {
+
+		// Conta até o indíce do último igual
+		count := 0
+		if vet[i] == vet[i+1] {
+			count++
+		}
+
+	}
+
+	return pares
 }
 
 func mnext(vet []int) []int {
@@ -52,15 +113,38 @@ func subseq(vet []int, seq []int) int {
 }
 
 func erase(vet []int, posList []int) []int {
-	_ = vet
-	_ = posList
-	return nil
+	newVet := make([]int, 0)
+	posList = sort(posList)
+	//Iterando sobre o maior vetor
+	for i := range vet {
+
+		if i+1 >= len(posList) {
+			break
+		}
+
+		if i == posList[i] {
+			continue
+		} else {
+			newVet = append(newVet, vet[i])
+		}
+
+	}
+
+	//Iterando sobre o menor vetor
+	// for i, value := range posList {
+	// 	if
+	// }
+	return newVet
 }
 
 func clear(vet []int, value int) []int {
-	_ = vet
-	_ = value
-	return nil
+	newVet := make([]int, 0)
+	for _, val := range vet {
+		if val != value {
+			newVet = append(newVet, val)
+		}
+	}
+	return newVet
 }
 
 func main() {

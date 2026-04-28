@@ -1,0 +1,154 @@
+{
+    "patches": [
+        {
+            "label": "2026-04-04_16-01-42",
+            "content": "@@ -36,22 +36,14 @@\n mt%22%0A\n-%09%22math%22%0A\n %09%22os%22%0A\n+\n %09%22st\n@@ -139,344 +139,28 @@\n r %7B%0A\n-%0A%09var frequencia map%5Bint%5Dint%0A%0A%09for _, value := range vet %7B%0A%09%09valor := math.Abs(float64(value))%0A%09%09valorInt := int(valor)%0A%09%09frequencia%5BvalorInt%5D++%0A%09%7D%0A%0A%09ocorrencias := make(%5B%5DPair, 0)%0A%0A%09for chave, value := range frequencia %7B%0A%09%09par := Pair%7B%0A%09%09%09One: chave,%0A%09%09%09Two: value,%0A%09%09%7D%0A%0A%09%09ocorrencias = append(ocorrencias, par)%0A%09%7D%0A%0A%09return ocorrencias\n+%09_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "132"
+        },
+        {
+            "label": "2026-04-04_18-58-21",
+            "content": "@@ -145,16 +145,20 @@\n air %7B%0A%0A%09\n+var \n frequenc\n@@ -160,24 +160,16 @@\n quencia \n-:= make(\n map%5Bint%5D\n@@ -171,17 +171,16 @@\n %5Bint%5Dint\n-)\n %0A%0A%09for _\n",
+            "lines": "152"
+        },
+        {
+            "label": "2026-04-04_18-59-57",
+            "content": "@@ -115,204 +115,8 @@\n %0A%7D%0A%0A\n-func sortPair(vet %5B%5DPair) %5B%5DPair %7B%0A%09for i := range vet %7B%0A%09%09for j := 0; j %3C len(vet)-1-i; j++ %7B%0A%09%09%09if vet%5Bj%5D.One %3E vet%5Bj+1%5D.One %7B%0A%09%09%09%09vet%5Bj%5D, vet%5Bj+1%5D = vet%5Bj+1%5D, vet%5Bj%5D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09return vet%0A%7D%0A%0A\n func\n@@ -477,17 +477,8 @@\n urn \n-sortPair(\n ocor\n@@ -484,17 +484,16 @@\n rrencias\n-)\n %0A%7D%0A%0Afunc\n",
+            "lines": "152"
+        },
+        {
+            "label": "2026-04-04_19-08-00",
+            "content": "@@ -378,83 +378,8 @@\n t)%0A%0A\n-%09//O mapa %C3%A9 usado para usar o valor %C3%BAnico da chave e valor como frequ%C3%AAncia%0A\n %09for\n@@ -395,32 +395,32 @@\n  := range vet %7B%0A\n+\n %09%09valor := math.\n@@ -607,32 +607,33 @@\n Two: value,%0A%09%09%7D%0A\n+%0A\n %09%09ocorrencias = \n@@ -730,421 +730,27 @@\n  %7B%0A%09\n-frequencia := make(map%5Bint%5Dint)%0A%0A%09//O mapa %C3%A9 usado para usar o valor %C3%BAnico da chave e valor como frequ%C3%AAncia%0A%09for _, value := range vet %7B%0A%09%09valor := math.Abs(float64(value))%0A%09%09valorInt := int(valor)%0A%09%09frequencia%5BvalorInt%5D++%0A%09%7D%0A%0A%09ocorrencias := make(%5B%5DPair, 0)%0A%0A%09for chave, value := range frequencia %7B%0A%09%09par := Pair%7B%0A%09%09%09One: chave,%0A%09%09%09Two: value,%0A%09%09%7D%0A%09%09ocorrencias = append(ocorrencias, par)%0A%09%7D%0A%0A%09return ocorrencias\n+_ = vet%0A%09return nil\n %0A%7D%0A%0A\n",
+            "lines": "163"
+        },
+        {
+            "label": "2026-04-04_19-16-51",
+            "content": "@@ -804,104 +804,311 @@\n  %7B%0A%09\n-pares := make(%5B%5DPair, 0)%0A%09for i := 0; i %3C len(vet)-1; i++ %7B%0A%09%09if vet%5Bi%5D == vet%5Bi+1%5D %7B%0A%09%09%09adicion\n+frequencia := make(map%5Bint%5Dint)%0A%0A%09//O mapa %C3%A9 usado para usar o valor %C3%BAnico da chave e valor como frequ%C3%AAncia%0A%09for _, value := range vet %7B%0A%09%09valor := math.Abs(float64(value))%0A%09%09valorInt := int(valor)%0A%09%09frequencia%5BvalorInt%5D++%0A%09%7D%0A%0A%09ocorrencias := make(%5B%5DPair, 0)%0A%0A%09for chave, value := range frequencia %7B%0A%09%09p\n ar :\n@@ -1119,17 +1119,16 @@\n ir%7B%0A\n-%09\n %09%09%09One: \n vet%5B\n@@ -1127,25 +1127,23 @@\n ne: \n-vet%5Bi%5D\n+chave\n ,%0A\n-%09\n %09%09%09Two: \n 2,%0A%09\n@@ -1142,23 +1142,31 @@\n wo: \n-2\n+value\n ,%0A\n-%09\n %09%09%7D%0A%09%09\n-%09pare\n+ocorrencia\n s = \n@@ -1176,29 +1176,25 @@\n end(\n-pares, adicionar)%0A%09%09%7D\n+ocorrencias, par)\n %0A%09%7D%0A\n@@ -1206,12 +1206,18 @@\n urn \n-pare\n+ocorrencia\n s%0A%7D%0A\n",
+            "lines": "181"
+        },
+        {
+            "label": "2026-04-05_15-07-45",
+            "content": "@@ -864,135 +864,8 @@\n + %7B%0A\n-%09%09if len(vet) == 1 %7B%0A%09%09%09adicionar := Pair%7B%0A%09%09%09%09One: vet%5Bi%5D,%0A%09%09%09%09Two: 1,%0A%09%09%09%7D%0A%09%09%09pares = append(pares, adicionar)%0A%09%09%09break%0A%09%09%7D%0A%0A\n %09%09if\n",
+            "lines": "173"
+        },
+        {
+            "label": "2026-04-05_15-09-36",
+            "content": "@@ -825,17 +825,52 @@\n air, 0)%0A\n-%0A\n+%09for i := 0; i %3C len(vet)-1; i++ %7B%0A%09\n %09if len(\n@@ -881,16 +881,17 @@\n  == 1 %7B%0A\n+%09\n %09%09adicio\n@@ -902,24 +902,25 @@\n := Pair%7B%0A%09%09%09\n+%09\n One: vet%5Bi%5D,\n@@ -919,24 +919,25 @@\n  vet%5Bi%5D,%0A%09%09%09\n+%09\n Two: 1,%0A%09%09%7D%0A\n@@ -934,18 +934,20 @@\n o: 1,%0A%09%09\n+%09\n %7D%0A\n+%09\n %09%09pares \n@@ -978,45 +978,19 @@\n r)%0A%09\n-%7D%0A%0A%09for i := 0; i %3C len(vet)-1; i++ %7B\n+%09%09break%0A%09%09%7D\n %0A%0A%09%09\n",
+            "lines": "182"
+        },
+        {
+            "label": "2026-04-05_15-10-03",
+            "content": "@@ -879,17 +879,17 @@\n ne: vet%5B\n-0\n+i\n %5D,%0A%09%09%09Tw\n",
+            "lines": "183"
+        },
+        {
+            "label": "2026-04-05_15-10-16",
+            "content": "@@ -979,101 +979,128 @@\n %0A%0A%09%09\n-// Conta at%C3%A9 o ind%C3%ADce do %C3%BAltimo igual%0A%09%09count := 0%0A%09%09if vet%5Bi%5D == vet%5Bi+1%5D %7B%0A%09%09%09count++\n+if vet%5Bi%5D == vet%5Bi+1%5D %7B%0A%09%09%09adicionar := Pair%7B%0A%09%09%09%09One: vet%5Bi%5D,%0A%09%09%09%09Two: 2,%0A%09%09%09%7D%0A%09%09%09pares = append(pares, adicionar)\n %0A%09%09%7D%0A\n-%0A\n %09%7D%0A%0A\n@@ -1572,118 +1572,26 @@\n  %7B%0A%09\n-newVet := make(%5B%5Dint, 0)%0A%09for _, val := range vet %7B%0A%09%09if val != value %7B%0A%09%09%09newVet = append(newVet, val)%0A%09%09%7D%0A%09%7D\n+_ = vet%0A%09_ = value\n %0A%09re\n@@ -1600,13 +1600,10 @@\n rn n\n-ewVet\n+il\n %0A%7D%0A%0A\n",
+            "lines": "183"
+        },
+        {
+            "label": "2026-04-05_15-16-47",
+            "content": "@@ -1467,119 +1467,28 @@\n  %7B%0A%09\n-newVet := make(%5B%5Dint, 0)%0A%09for i := range vet %7B%0A%09%09if i != posList%5Bi%5D %7B%0A%09%09%09newVet = append(newVet, vet%5Bi%5D)%0A%09%09%7D%0A%09%7D\n+_ = vet%0A%09_ = posList\n %0A%09re\n@@ -1485,37 +1485,34 @@\n osList%0A%09return n\n-ewVet\n+il\n %0A%7D%0A%0Afunc clear(v\n",
+            "lines": "186"
+        },
+        {
+            "label": "2026-04-05_15-19-59",
+            "content": "@@ -1516,50 +1516,24 @@\n %7B%0A%09%09\n-for j := range posList %7B%0A%09%09%09\n if i\n+ \n !=\n+ \n posList%5B\n j%5D %7B\n@@ -1532,14 +1532,13 @@\n ist%5B\n-j\n+i\n %5D %7B%0A\n-%09\n %09%09%09n\n@@ -1574,13 +1574,10 @@\n )%0A%09%09\n-%09%7D %0A%09\n+%7D%0A\n %09%7D%0A%09\n",
+            "lines": "190"
+        },
+        {
+            "label": "2026-04-05_15-22-09",
+            "content": "@@ -1544,20 +1544,18 @@\n %0A%09%09%09if i\n- \n !=\n- \n posList%5B\n@@ -1595,32 +1595,30 @@\n vet%5Bi%5D)%0A%09%09%09%7D\n+ \n %0A%09%09%7D%0A\n-%09%7D%0A\n %09return newV\n",
+            "lines": "191"
+        },
+        {
+            "label": "2026-04-05_15-23-03",
+            "content": "@@ -1506,24 +1506,52 @@\n range vet %7B%0A\n+%09%09for j := range posList %7B%0A%09\n %09%09if i != po\n@@ -1560,13 +1560,14 @@\n ist%5B\n-i\n+j\n %5D %7B%0A\n+%09\n %09%09%09n\n@@ -1597,16 +1597,21 @@\n vet%5Bi%5D)%0A\n+%09%09%09%7D%0A\n %09%09%7D%0A%09%7D%0A%09\n",
+            "lines": "192"
+        },
+        {
+            "label": "2026-04-05_15-25-57",
+            "content": "@@ -311,190 +311,8 @@\n %0A%7D%0A%0A\n-func sort(vet %5B%5Dint) %5B%5Dint %7B%0A%09for i := range vet %7B%0A%09%09for j := 0; j %3C len(vet)-1-i; j++ %7B%0A%09%09%09if vet%5Bj%5D %3E vet%5Bj+1%5D %7B%0A%09%09%09%09vet%5Bj%5D, vet%5Bj+1%5D = vet%5Bj+1%5D, vet%5Bj%5D%0A%09%09%09%7D%0A%09%09%7D%0A%09%7D%0A%09return vet%0A%7D%0A%0A\n func\n@@ -1493,91 +1493,28 @@\n 0)%0A%09\n-posList = sort(posList)%0A%09for i := range vet %7B%0A%09%09if i %3E= len(posList) %7B%0A%09%09%09break%0A%09%09%7D\n+for i := range vet %7B\n %0A%09%09i\n",
+            "lines": "190"
+        },
+        {
+            "label": "2026-04-05_15-30-19",
+            "content": "@@ -1725,16 +1725,17 @@\n %09%09if i %3E\n+=\n  len(pos\n",
+            "lines": "205"
+        },
+        {
+            "label": "2026-04-05_15-30-35",
+            "content": "@@ -1738,18 +1738,16 @@\n posList)\n--1\n  %7B%0A%09%09%09br\n",
+            "lines": "205"
+        },
+        {
+            "label": "2026-04-05_15-30-48",
+            "content": "@@ -1699,40 +1699,8 @@\n st)%0A\n-%09//Iterando sobre o maior vetor%0A\n %09for\n@@ -1738,16 +1738,18 @@\n posList)\n+-1\n  %7B%0A%09%09%09br\n@@ -1825,95 +1825,9 @@\n %0A%09%7D%0A\n-%0A%09//Iterando sobre o menor vetor%0A%09// for i, value := range posList %7B%0A%09// %09if%0A%09// %7D%0A%09// \n+%09\n retu\n",
+            "lines": "205"
+        },
+        {
+            "label": "2026-04-05_15-37-20",
+            "content": "@@ -1935,16 +1935,19 @@\n %0A%09// %7D%0A%09\n+// \n return n\n",
+            "lines": "211"
+        },
+        {
+            "label": "2026-04-05_15-37-26",
+            "content": "@@ -1755,18 +1755,16 @@\n %7B%0A%09%09if i\n-+1\n  %3E len(p\n",
+            "lines": "211"
+        },
+        {
+            "label": "2026-04-05_15-37-46",
+            "content": "@@ -1749,16 +1749,54 @@\n e vet %7B%0A\n+%09%09if i+1 %3E len(posList) %7B%0A%09%09%09break%0A%09%09%7D\n %0A%09%09if i \n@@ -1853,48 +1853,8 @@\n %0A%09%09%7D\n-%0A%0A%09%09if i+1 %3E len(posList) %7B%0A%09%09%09break%0A%09%09%7D\n %0A%09%7D%0A\n",
+            "lines": "211"
+        },
+        {
+            "label": "2026-04-05_15-43-46",
+            "content": "@@ -1819,16 +1819,18 @@\n %0A%0A%09%09if i\n++1\n  %3E len(p\n",
+            "lines": "213"
+        },
+        {
+            "label": "2026-04-05_15-43-54",
+            "content": "@@ -1821,17 +1821,16 @@\n %09%09if i %3E\n-=\n  len(pos\n@@ -1834,18 +1834,16 @@\n posList)\n--1\n  %7B%0A%09%09%09br\n",
+            "lines": "213"
+        },
+        {
+            "label": "2026-04-05_15-44-08",
+            "content": "@@ -1757,17 +1757,17 @@\n %0A%09%09if i \n-=\n+!\n = posLis\n@@ -1777,31 +1777,8 @@\n %5D %7B%0A\n-%09%09%09continue%0A%09%09%7D else %7B%0A\n %09%09%09n\n@@ -1809,24 +1809,64 @@\n et%5Bi%5D)%0A%09%09%7D%0A%0A\n+%09%09if i %3E= len(posList)-1 %7B%0A%09%09%09break%0A%09%09%7D%0A\n %09%7D%0A%0A%09//Itera\n",
+            "lines": "213"
+        },
+        {
+            "label": "2026-04-05_15-46-20",
+            "content": "@@ -1754,43 +1754,8 @@\n  %7B%0A%0A\n-%09%09if i == len(vet) %7B%0A%09%09%09break%0A%09%09%7D%0A%0A\n %09%09if\n",
+            "lines": "212"
+        },
+        {
+            "label": "2026-04-05_15-46-43",
+            "content": "@@ -1768,18 +1768,16 @@\n len(vet)\n--1\n  %7B%0A%09%09%09br\n",
+            "lines": "216"
+        },
+        {
+            "label": "2026-04-05_15-46-48",
+            "content": "@@ -1757,17 +1757,17 @@\n %0A%09%09if i \n-%3E\n+=\n = len(ve\n",
+            "lines": "216"
+        },
+        {
+            "label": "2026-04-05_15-47-03",
+            "content": "@@ -1764,22 +1764,18 @@\n  %3E= len(\n-posLis\n+ve\n t)-1 %7B%0A%09\n",
+            "lines": "216"
+        },
+        {
+            "label": "2026-04-05_15-47-33",
+            "content": "@@ -1772,16 +1772,18 @@\n posList)\n+-1\n  %7B%0A%09%09%09br\n",
+            "lines": "216"
+        },
+        {
+            "label": "2026-04-05_15-47-44",
+            "content": "@@ -1756,18 +1756,16 @@\n %0A%0A%09%09if i\n-+1\n  %3E= len(\n",
+            "lines": "216"
+        },
+        {
+            "label": "2026-04-05_15-47-58",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"math\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\ntype Pair struct {\n\tOne int\n\tTwo int\n}\n\nfunc sortPair(vet []Pair) []Pair {\n\tfor i := range vet {\n\t\tfor j := 0; j < len(vet)-1-i; j++ {\n\t\t\tif vet[j].One > vet[j+1].One {\n\t\t\t\tvet[j], vet[j+1] = vet[j+1], vet[j]\n\t\t\t}\n\t\t}\n\t}\n\treturn vet\n}\n\nfunc sort(vet []int) []int {\n\tfor i := range vet {\n\t\tfor j := 0; j < len(vet)-1-i; j++ {\n\t\t\tif vet[j] > vet[j+1] {\n\t\t\t\tvet[j], vet[j+1] = vet[j+1], vet[j]\n\t\t\t}\n\t\t}\n\t}\n\treturn vet\n}\n\nfunc occurr(vet []int) []Pair {\n\n\tfrequencia := make(map[int]int)\n\n\t//O mapa \u00e9 usado para usar o valor \u00fanico da chave e valor como frequ\u00eancia\n\tfor _, value := range vet {\n\t\tvalor := math.Abs(float64(value))\n\t\tvalorInt := int(valor)\n\t\tfrequencia[valorInt]++\n\t}\n\n\tocorrencias := make([]Pair, 0)\n\n\tfor chave, value := range frequencia {\n\t\tpar := Pair{\n\t\t\tOne: chave,\n\t\t\tTwo: value,\n\t\t}\n\t\tocorrencias = append(ocorrencias, par)\n\t}\n\n\treturn sortPair(ocorrencias)\n}\n\nfunc teams(vet []int) []Pair {\n\tpares := make([]Pair, 0)\n\n\tif len(vet) == 1 {\n\t\tadicionar := Pair{\n\t\t\tOne: vet[0],\n\t\t\tTwo: 1,\n\t\t}\n\t\tpares = append(pares, adicionar)\n\t}\n\n\tfor i := 0; i < len(vet)-1; i++ {\n\n\t\t// Conta at\u00e9 o ind\u00edce do \u00faltimo igual\n\t\tcount := 0\n\t\tif vet[i] == vet[i+1] {\n\t\t\tcount++\n\t\t}\n\n\t}\n\n\treturn pares\n}\n\nfunc mnext(vet []int) []int {\n\t_ = vet\n\treturn nil\n}\n\nfunc alone(vet []int) []int {\n\t_ = vet\n\treturn nil\n}\n\nfunc couple(vet []int) int {\n\t_ = vet\n\treturn 0\n}\n\nfunc hasSubseq(vet []int, seq []int, pos int) bool {\n\t_ = vet\n\t_ = seq\n\t_ = pos\n\treturn false\n}\n\nfunc subseq(vet []int, seq []int) int {\n\t_ = vet\n\t_ = seq\n\treturn -1\n}\n\nfunc erase(vet []int, posList []int) []int {\n\tnewVet := make([]int, 0)\n\tposList = sort(posList)\n\t//Iterando sobre o maior vetor\n\tfor i := range vet {\n\n\t\tif i+1 >= len(posList) {\n\t\t\tbreak\n\t\t}\n\n\t\tif i == posList[i] {\n\t\t\tcontinue\n\t\t} else {\n\t\t\tnewVet = append(newVet, vet[i])\n\t\t}\n\n\t}\n\n\t//Iterando sobre o menor vetor\n\t// for i, value := range posList {\n\t// \tif\n\t// }\n\treturn newVet\n}\n\nfunc clear(vet []int, value int) []int {\n\tnewVet := make([]int, 0)\n\tfor _, val := range vet {\n\t\tif val != value {\n\t\t\tnewVet = append(newVet, val)\n\t\t}\n\t}\n\treturn newVet\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tfor {\n\t\tfmt.Print(\"$\")\n\t\tif !scanner.Scan() {\n\t\t\tbreak\n\t\t}\n\t\tline := scanner.Text()\n\t\targs := strings.Split(line, \" \")\n\t\tfmt.Println(line)\n\n\t\tswitch args[0] {\n\t\tcase \"occurr\":\n\t\t\tprintSlice(occurr(str2vet(args[1])))\n\t\tcase \"teams\":\n\t\t\tprintSlice(teams(str2vet(args[1])))\n\t\tcase \"mnext\":\n\t\t\tprintSlice(mnext(str2vet(args[1])))\n\t\tcase \"alone\":\n\t\t\tprintSlice(alone(str2vet(args[1])))\n\t\tcase \"erase\":\n\t\t\tprintSlice(erase(str2vet(args[1]), str2vet(args[2])))\n\t\tcase \"clear\":\n\t\t\tval, _ := strconv.Atoi(args[2])\n\t\t\tprintSlice(clear(str2vet(args[1]), val))\n\t\tcase \"subseq\":\n\t\t\tfmt.Println(subseq(str2vet(args[1]), str2vet(args[2])))\n\t\tcase \"couple\":\n\t\t\tfmt.Println(couple(str2vet(args[1])))\n\t\tcase \"end\":\n\t\t\treturn\n\t\tdefault:\n\t\t\tfmt.Println(\"Invalid command\")\n\t\t}\n\t}\n}\n\n// Fun\u00e7\u00f5es auxiliares\n\nfunc str2vet(str string) []int {\n\tif str == \"[]\" {\n\t\treturn nil\n\t}\n\tstr = str[1 : len(str)-1]\n\tparts := strings.Split(str, \",\")\n\tvar vet []int\n\tfor _, part := range parts {\n\t\tnum, _ := strconv.Atoi(strings.TrimSpace(part))\n\t\tvet = append(vet, num)\n\t}\n\treturn vet\n}\n\nfunc printSlice[T any](vet []T) {\n\tfmt.Print(\"[\")\n\tfor i, x := range vet {\n\t\tif i > 0 {\n\t\t\tfmt.Print(\", \")\n\t\t}\n\t\tfmt.Print(x)\n\t}\n\tfmt.Println(\"]\")\n}\n\nfunc (p Pair) String() string {\n\treturn fmt.Sprintf(\"(%v, %v)\", p.One, p.Two)\n}\n",
+            "lines": "216"
+        }
+    ]
+}
