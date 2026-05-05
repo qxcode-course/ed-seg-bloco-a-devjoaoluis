@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"errors"
 	"fmt"
 	"os"
 	"strconv"
@@ -23,10 +24,16 @@ func NewVector(capacity int) *Vector {
 }
 
 func (v *Vector) Reserve(newCapacity int) {
+	novo := make([]int, v.size, newCapacity)
+	copy(novo, v.data)
+	v.data = novo
 	v.capacity = newCapacity
 }
 
 func (v *Vector) PushBack(value int) {
+	if v.Size() == v.Capacity() {
+		v.Reserve(v.Capacity() * 2)
+	}
 	v.data = append(v.data, value)
 	v.size++
 }
@@ -35,23 +42,112 @@ func (v *Vector) Size() int {
 	return v.size
 }
 
-func (v *Vector) Status() string {
-	size := strconv.Itoa(v.size)
-	cap := strconv.Itoa(v.capacity)
-	s := "size:" + size + " capacity:" + cap
-	return s
+// func (v *Vector) PopBack() (int, error) {
+
+// 	removed, err := v.data[v.size]
+
+// 	if v.Size() == 0 {
+// 		return removed, err
+// 	}
+// }
+
+func (v *Vector) Capacity() int {
+	return v.capacity
 }
 
-func (v *Vector) Show() {
-	if v.size == 0 {
-		fmt.Println("[]")
-	} else {
-		fmt.Print("[")
-		for _, value := range v.data {
-			fmt.Print(value)
-		}
-		fmt.Print("]")
+func (v *Vector) Status() string {
+	// cap := 0
+	// for range v.data {
+	// 	cap++
+	// }
+	// capString := strconv.Itoa(cap)
+	return "size:" + strconv.Itoa(v.size) + " capacity:" + strconv.Itoa(v.capacity)
+}
+
+func (v *Vector) String() string {
+	return "" //implementar depois
+}
+
+func (v *Vector) Get(index int) int {
+	return v.data[index]
+}
+
+func (v *Vector) At(index int) (int, error) {
+	if index > v.Size()-1 {
+		return -1, errors.New("index out of the bounds")
 	}
+	return v.data[index], nil
+}
+
+func (v *Vector) Set(index int, value int) error {
+	v.data[index] = value
+	return nil
+	//verificar como que se usa o error
+}
+
+func (v *Vector) Clear() {
+	//
+}
+
+func (v *Vector) Insert() {
+
+}
+
+func (v *Vector) Erase() {
+
+}
+
+func (v *Vector) IndexOf(value int) int {
+	for i, val := range v.data {
+		if val == value {
+			return i
+		}
+	}
+	return -1
+}
+
+func (v *Vector) Contains() {
+
+}
+
+func (v *Vector) Slice() {
+
+}
+
+func (v *Vector) Show() string {
+	// if v.Size() == 0 {
+	// 	fmt.Println("[]")
+	// } else {
+	// 	fmt.Print("[")
+	// 	for index, value := range v.data {
+	// 		if value != 0 {
+	// 			if index != v.Size() {
+	// 				fmt.Printf("%d, ", value)
+	// 			} else {
+	// 				fmt.Print(value)
+	// 			}
+	// 		} else {
+	// 			continue
+	// 		}
+	// 	}
+	// 	fmt.Print("]\n")
+	// }
+
+	index := 0
+
+	for _, value := range v.data {
+		if value == 0 {
+			index++
+		} else {
+			break
+		}
+	}
+
+	if v.Size() == 0 {
+		return "[]"
+	}
+	return "[" + Join(v.data[1:], ", ") + "]"
+
 }
 
 func Join(slice []int, sep string) string {
@@ -60,6 +156,7 @@ func Join(slice []int, sep string) string {
 	}
 	var result strings.Builder
 	fmt.Fprintf(&result, "%d", slice[0])
+
 	for _, value := range slice[1:] {
 		fmt.Fprintf(&result, "%s%d", sep, value)
 	}
@@ -91,13 +188,13 @@ func main() {
 			value, _ := strconv.Atoi(parts[1])
 			v = NewVector(value)
 		case "push":
-			// for _, part := range parts[1:] {
-			// 	value, _ := strconv.Atoi(part)
-			// 	v.PushBack(value)
-			// }
+			for _, part := range parts[1:] {
+				value, _ := strconv.Atoi(part)
+				v.PushBack(value)
+			}
 		case "show":
-			v.Show()
-			// fmt.Println(v.Show())
+			// v.Show()
+			fmt.Println(v.Show())
 		case "status":
 			fmt.Println(v.Status())
 		case "pop":
@@ -132,15 +229,15 @@ func main() {
 		case "clear":
 			// v.Clear()
 		case "capacity":
-			// fmt.Println(v.Capacity())
+			fmt.Println(v.Capacity())
 		case "get":
-			// index, _ := strconv.Atoi(parts[1])
-			// value, err := v.At(index)
-			// if err != nil {
-			// 	fmt.Println(err)
-			// } else {
-			// 	fmt.Println(value)
-			// }
+			index, _ := strconv.Atoi(parts[1])
+			value, err := v.At(index)
+			if err != nil {
+				fmt.Println(err)
+			} else {
+				fmt.Println(value)
+			}
 		case "set":
 			// index, _ := strconv.Atoi(parts[1])
 			// value, _ := strconv.Atoi(parts[2])
