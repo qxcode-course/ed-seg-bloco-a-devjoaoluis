@@ -15,7 +15,16 @@ sources:
   quests: null
   tasks: null
 expanded:
+- ed@linear
+- ed@tree
+- ed@bfs
 - ed@basic
+- ed@list
+- ed@dfs
+- ed@backtrack
+- ed@map_set
+- ed@rec
+- ed@vector
 flags:
   inbox: all
   panel: help
@@ -23,5 +32,5 @@ flags:
   task_graph_mode: executions
   show_time: 'true'
 lang: go
-selected: ed@basic
-selected_index: 0
+selected: ed@enesimo
+selected_index: 27

@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-12_17-52-59",
+            "content": "@@ -433,37 +433,8 @@\n urn%0A\n-%09%7D else %7B%0A%09%09grid%5Bl%5D%5Bc%5D = 'o'%0A\n %09%7D%0A%09\n@@ -495,16 +495,33 @@\n o atual%0A\n+%09grid%5Bl%5D%5Bc%5D = 'o'\n %0A%09// cha\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-05-12_17-57-25",
+            "content": "@@ -142,16 +142,108 @@\n rid%5B0%5D)%0A\n+%09// var queimados %5Bnl%5D%5Bnc%5Dbool%0A%09// var isBurned func(nl int, nc int, grid %5B%5D%5B%5Drune, c int)%0A%0A\n %09// _, _\n@@ -299,23 +299,23 @@\n %09if \n-n\n l \n-%3C \n+%3E n\n l %7C%7C \n-n\n c \n-%3C \n+%3E n\n c %7C%7C\n",
+            "lines": "58"
+        },
+        {
+            "label": "2026-05-12_18-02-23",
+            "content": "@@ -333,24 +333,53 @@\n  %7B%0A%09%09return%0A\n+%09%7D else %7B%0A%09%09grid%5Bl%5D%5Bc%5D = 'o'%0A\n %09%7D%0A%09// queim\n@@ -432,33 +432,16 @@\n o atual%0A\n-%09grid%5Bl%5D%5Bc%5D = 'o'\n %0A%09// cha\n@@ -501,13 +501,13 @@\n d, l\n+-1\n , c\n-+1\n )%0A%09b\n@@ -526,13 +526,13 @@\n d, l\n++1\n , c\n--1\n )%0A%09b\n@@ -539,37 +539,37 @@\n urnTrees(grid, l\n--1\n , c\n++1\n )%0A%09burnTrees(gri\n@@ -572,21 +572,21 @@\n (grid, l\n-+1\n , c\n+-1\n )%0A%0A%7D%0A%0Afu\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-05-12_18-05-42",
+            "content": "@@ -489,27 +489,24 @@\n d, l, c+1)%0A%09\n-// \n burnTrees(gr\n@@ -518,19 +518,16 @@\n , c-1)%0A%09\n-// \n burnTree\n@@ -543,19 +543,16 @@\n -1, c)%0A%09\n-// \n burnTree\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-12_18-05-52",
+            "content": "@@ -489,24 +489,27 @@\n d, l, c+1)%0A%09\n+// \n burnTrees(gr\n@@ -521,16 +521,19 @@\n , c-1)%0A%09\n+// \n burnTree\n@@ -549,16 +549,19 @@\n -1, c)%0A%09\n+// \n burnTree\n@@ -576,23 +576,16 @@\n l+1, c)%0A\n-%09return\n %0A%7D%0A%0Afunc\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-12_18-06-35",
+            "content": "@@ -214,33 +214,35 @@\n %3C l \n-%7B%0A%09%09return%0A%09%7D%0A%0A%09if nc %3C c\n+%7C%7C nc %3C c %7C%7C l %3C 0 %7C%7C c %3C 0\n  %7B%0A%09\n@@ -567,16 +567,23 @@\n l+1, c)%0A\n+%09return\n %0A%7D%0A%0Afunc\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-05-12_18-08-58",
+            "content": "@@ -494,22 +494,8 @@\n +1)%0A\n-%09if c != 0 %7B%0A%09\n %09bur\n@@ -519,26 +519,8 @@\n -1)%0A\n-%09%7D%0A%0A%09if l != 0 %7B%0A%09\n %09bur\n@@ -540,19 +540,16 @@\n l-1, c)%0A\n-%09%7D%0A\n %09burnTre\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-05-12_18-13-25",
+            "content": "@@ -207,24 +207,14 @@\n %09if \n-l %3E= nl %7C%7C \n+n\n l %3C \n-0\n+l\n  %7B%0A%09\n@@ -233,24 +233,14 @@\n %09if \n-c %3E= nc %7C%7C \n+n\n c %3C \n-0\n+c\n  %7B%0A%09\n@@ -490,16 +490,30 @@\n l, c+1)%0A\n+%09if c != 0 %7B%0A%09\n %09burnTre\n@@ -529,16 +529,34 @@\n l, c-1)%0A\n+%09%7D%0A%0A%09if l != 0 %7B%0A%09\n %09burnTre\n@@ -572,16 +572,19 @@\n l-1, c)%0A\n+%09%7D%0A\n %09burnTre\n",
+            "lines": "62"
+        },
+        {
+            "label": "2026-05-12_18-20-02",
+            "content": "@@ -207,14 +207,24 @@\n %09if \n-nl %3C l\n+l %3E= nl %7C%7C l %3C 0\n  %7B%0A%09\n@@ -243,14 +243,24 @@\n %09if \n-nc %3C c\n+c %3E= nc %7C%7C c %3C 0\n  %7B%0A%09\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-05-12_18-20-16",
+            "content": "@@ -207,24 +207,14 @@\n %09if \n-l %3E= nl %7C%7C \n+n\n l %3C \n-0\n+l\n  %7B%0A%09\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-05-12_18-21-10",
+            "content": "@@ -243,24 +243,14 @@\n %09if \n-c %3E= nc %7C%7C \n+n\n c %3C \n-0\n+c\n  %7B%0A%09\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-05-12_18-21-28",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc burnTrees(grid [][]rune, l, c int) {\n\t_, _, _ = grid, l, c\n\tnl := len(grid)\n\tnc := len(grid[0])\n\t// _, _ = nl, nc\n\t// se estiver fora da matriz, retorne\n\tif l >= nl || l < 0 {\n\t\treturn\n\t}\n\n\tif c >= nc || c < 0 {\n\t\treturn\n\t}\n\t// se o elemento atual n\u00e3o for uma arvore, retorne\n\tif grid[l][c] != '#' {\n\t\treturn\n\t}\n\t// queime a arvore colocando o caractere 'o' na posi\u00e7\u00e3o atual\n\tgrid[l][c] = 'o'\n\t// chame a recurs\u00e3o para todos os 4 vizinhos\n\tburnTrees(grid, l, c+1)\n\tburnTrees(grid, l, c-1)\n\tburnTrees(grid, l-1, c)\n\tburnTrees(grid, l+1, c)\n\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tline := scanner.Text()\n\tvar nl, nc, lfire, cfire int\n\tfmt.Sscanf(line, \"%d %d %d %d\", &nl, &nc, &lfire, &cfire)\n\n\tgrid := make([][]rune, 0, nl)\n\tfor range nl {\n\t\tscanner.Scan()\n\t\tline := []rune(scanner.Text())\n\t\tgrid = append(grid, line)\n\t}\n\tburnTrees(grid, lfire, cfire)\n\tshowGrid(grid)\n}\n\nfunc showGrid(grid [][]rune) {\n\tfor _, line := range grid {\n\t\tfmt.Println(string(line))\n\t}\n}\n",
+            "lines": "57"
+        }
+    ]
+}

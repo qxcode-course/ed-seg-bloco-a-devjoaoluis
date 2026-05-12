@@ -1,0 +1,99 @@
+{
+    "patches": [
+        {
+            "label": "2026-05-12_18-44-04",
+            "content": "@@ -327,10 +327,10 @@\n (a) \n-&&\n+==\n  EhV\n@@ -356,17 +356,16 @@\n true%0A%09%7D%0A\n-%0A\n %09// voc%C3%AA\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-05-12_18-46-39",
+            "content": "@@ -323,18 +323,18 @@\n azio(a) \n-==\n+&&\n  EhVazio\n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-05-12_18-46-51",
+            "content": "@@ -361,59 +361,8 @@\n %09%7D%0A%0A\n-%09if EhVazio(a) && !EhVazio(b) %7B%0A%09%09return false%0A%09%7D%0A%0A\n %09// \n",
+            "lines": "57"
+        },
+        {
+            "label": "2026-05-12_18-47-56",
+            "content": "@@ -358,19 +358,16 @@\n ue%0A%09%7D%0A%0A%09\n-// \n if EhVaz\n@@ -390,19 +390,16 @@\n o(b) %7B%0A%09\n-// \n %09return \n@@ -405,19 +405,16 @@\n  false%0A%09\n-// \n %7D%0A%0A%09// v\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-05-12_18-48-05",
+            "content": "@@ -327,14 +327,10 @@\n (a) \n-%7B%0A%09%09if\n+==\n  EhV\n@@ -341,17 +341,16 @@\n (b) %7B%0A%09%09\n-%09\n return t\n@@ -357,27 +357,8 @@\n rue%0A\n-%09%09%7D%0A%09%09return false%0A\n %09%7D%0A%0A\n",
+            "lines": "61"
+        },
+        {
+            "label": "2026-05-12_18-49-07",
+            "content": "@@ -647,16 +647,38 @@\n  b%5B1:%5D)%0A\n+%09equals(a%5B1:%5D, b%5B1:%5D)%0A\n %09// n%C3%A3o \n@@ -755,36 +755,21 @@\n %09return \n-equals(a%5B1:%5D, b%5B1:%5D)\n+false\n %0A%7D%0A%0Afunc\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-05-12_18-50-22",
+            "content": "@@ -323,18 +323,22 @@\n azio(a) \n-==\n+%7B%0A%09%09if\n  EhVazio\n@@ -341,24 +341,25 @@\n azio(b) %7B%0A%09%09\n+%09\n return true%0A\n@@ -358,16 +358,35 @@\n rn true%0A\n+%09%09%7D%0A%09%09return false%0A\n %09%7D%0A%0A%09// \n",
+            "lines": "63"
+        },
+        {
+            "label": "2026-05-12_18-50-53",
+            "content": "@@ -323,18 +323,18 @@\n azio(a) \n-&&\n+==\n  EhVazio\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-05-12_18-51-41",
+            "content": "@@ -482,17 +482,17 @@\n if a%5B0%5D \n-=\n+!\n = b%5B0%5D %7B\n@@ -501,36 +501,21 @@\n %09return \n-equals(a%5B1:%5D, b%5B1:%5D)\n+false\n %0A%09%7D%0A%09// \n@@ -709,21 +709,36 @@\n %09return \n-false\n+equals(a%5B1:%5D, b%5B1:%5D)\n %0A%7D%0A%0Afunc\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-05-12_18-52-52",
+            "content": "@@ -330,9 +330,8 @@\n  && \n-!\n EhVa\n@@ -357,16 +357,76 @@\n rue%0A%09%7D%0A%0A\n+%09// if EhVazio(a) && !EhVazio(b) %7B%0A%09// %09return false%0A%09// %7D%0A%0A\n %09// voc%C3%AA\n@@ -703,16 +703,29 @@\n iliares%0A\n+%09_, _ = a, b%0A\n %09return \n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-05-12_18-54-49",
+            "content": "@@ -349,20 +349,19 @@\n %09return \n-fals\n+tru\n e%0A%09%7D%0A%0A%09/\n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-05-12_18-54-56",
+            "content": "@@ -326,16 +326,17 @@\n o(a) && \n+!\n EhVazio(\n@@ -353,11 +353,12 @@\n urn \n-tru\n+fals\n e%0A%09%7D\n@@ -645,17 +645,16 @@\n iliares%0A\n-%0A\n %09return \n",
+            "lines": "55"
+        },
+        {
+            "label": "2026-05-12_18-55-03",
+            "content": "@@ -361,82 +361,8 @@\n %09%7D%0A%0A\n-%09if !EhVazio(a) %7B%0A%09%09return false%0A%09%7D%0A%0A%09if !EhVazio(b) %7B%0A%09%09return false%0A%09%7D%0A%0A\n %09// \n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-05-12_18-57-28",
+            "content": "@@ -377,10 +377,32 @@\n (a) \n-%7C%7C\n+%7B%0A%09%09return false%0A%09%7D%0A%0A%09if\n  !Eh\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-05-12_18-57-51",
+            "content": "@@ -474,17 +474,17 @@\n if a%5B0%5D \n-!\n+=\n = b%5B0%5D %7B\n@@ -489,29 +489,44 @@\n  %7B%0A%09%09return \n-false\n+equals(a%5B1:%5D, b%5B1:%5D)\n %0A%09%7D%0A%09// e n%C3%A3\n@@ -704,36 +704,21 @@\n %09return \n-equals(a%5B1:%5D, b%5B1:%5D)\n+false\n %0A%7D%0A%0Afunc\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-05-12_19-00-46",
+            "content": "@@ -377,60 +377,10 @@\n (a) \n-&& EhVazio(b) %7B%0A%09%09return false%0A%09%7D%0A%0A%09if EhVazio(a) &&\n+%7C%7C\n  !Eh\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-05-12_19-02-21",
+            "content": "@@ -409,19 +409,16 @@\n se%0A%09%7D%0A%0A%09\n-// \n if EhVaz\n@@ -441,19 +441,16 @@\n o(b) %7B%0A%09\n-// \n %09return \n@@ -456,19 +456,16 @@\n  false%0A%09\n-// \n %7D%0A%0A%09// v\n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-05-12_19-02-27",
+            "content": "@@ -361,17 +361,16 @@\n %09%7D%0A%0A%09if \n-(\n !EhVazio\n@@ -390,14 +390,37 @@\n o(b)\n-) %7C%7C (\n+ %7B%0A%09%09return false%0A%09%7D%0A%0A%09// if \n EhVa\n@@ -440,21 +440,23 @@\n Vazio(b)\n-)\n  %7B%0A%09\n+// \n %09return \n@@ -458,24 +458,27 @@\n turn false%0A%09\n+// \n %7D%0A%0A%09// voc%C3%AA \n",
+            "lines": "64"
+        },
+        {
+            "label": "2026-05-12_19-03-02",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc EhVazio(vet []int) bool {\n\treturn fmt.Sprint(vet) == \"[]\"\n}\n\n// n\u00e3o altere a assinatura\nfunc equals(a []int, b []int) bool {\n\t// n\u00e3o use a fun\u00e7\u00e3o len para ver ou comparar os tamanhos\n\t// utilize a fun\u00e7\u00e3o EhVazio para ver se o vetor \u00e9 vazio\n\tif EhVazio(a) && EhVazio(b) {\n\t\treturn true\n\t}\n\n\tif (!EhVazio(a) && EhVazio(b)) || (EhVazio(a) && !EhVazio(b)) {\n\t\treturn false\n\t}\n\n\t// voc\u00ea s\u00f3 pode consultar o primeiro elemento do vetor\n\tif a[0] != b[0] {\n\t\treturn false\n\t}\n\t// e n\u00e3o pode usar nenhum tipo de la\u00e7o\n\t// Use recursao para consultar os outros elementos equals(a[1:], b[1:])\n\t// n\u00e3o altere o prot\u00f3tipo da fun\u00e7\u00e3o nem crie fun\u00e7\u00f5es auxiliares\n\n\treturn equals(a[1:], b[1:])\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\n\tscanner.Scan()\n\tvet1 := str2slice(scanner.Text())\n\tscanner.Scan()\n\tvet2 := str2slice(scanner.Text())\n\tif equals(vet1, vet2) {\n\t\tfmt.Println(\"iguais\")\n\t} else {\n\t\tfmt.Println(\"diferentes\")\n\t}\n}\n\nfunc str2slice(line string) []int {\n\tparts := strings.Fields(line)\n\tnums := make([]int, 0)\n\tfor i := 1; i < len(parts)-1; i++ {\n\t\tvalue, _ := strconv.Atoi(parts[i])\n\t\tnums = append(nums, value)\n\t}\n\treturn nums\n}\n",
+            "lines": "60"
+        }
+    ]
+}
