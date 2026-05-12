@@ -41,7 +41,22 @@ func (e *Editor) KeyEnter() {
 
 // ajustar metodo para ir para a próxima linha
 func (e *Editor) KeyRight() {
-	e.cursor = e.cursor.Next()
+	if e.cursor != e.line.Value.End() {
+		e.cursor = e.cursor.Next()
+		return
+	}
+
+	// if e.cursor == e.line.Value.End() {
+	// 	e.line = e.lines.Front()
+	// 	e.cursor = e.line.Value.Front()
+	// }
+
+	// e.cursor = e.line.Value.Front()
+
+	if e.line.Next() != e.lines.End() {
+		e.line = e.line.Next()
+		e.cursor = e.line.Value.Front()
+	}
 }
 
 func (e *Editor) KeyUp() {
@@ -53,14 +68,26 @@ func (e *Editor) KeyUp() {
 }
 
 func (e *Editor) KeyDown() {
-	e.line = e.line.Next()
+	if e.line != e.lines.End() {
+		idx := e.line.Value.IndexOf(e.cursor)
+		e.line = e.line.Next()
+		e.cursor = e.line.Value.Front()
+
+		target := e.line.Value.Front()
+		for i := 0; i < idx && target != e.line.Value.End(); i++ {
+			target = target.Next()
+		}
+		e.cursor = target
+		return
+	}
+
 }
 
 func (e *Editor) KeyBackspace() {
-	if e.cursor == e.line.Value.Front() {
-		e.line.Value.Erase()
-		e.KeyUp()
-	}
+	// if e.cursor == e.line.Value.Front() {
+	// 	e.line.Value.Erase()
+	// 	e.KeyUp()
+	// }
 	e.cursor = e.cursor.Prev()
 	e.cursor = e.line.Value.Erase(e.cursor) //linha atual, inserindo valor na linha atual
 }
