@@ -1,0 +1,42 @@
+2026-05-27 22:44:18, SELF, v:1, k:ed@treinando, self:1, rate:100, study:145, concept:1
+2026-05-27 22:44:43, SELF, v:1, k:ed@mdc, self:1, rate:100, study:20, concept:1
+2026-05-27 22:44:54, MOVE, v:1, k:ed@eh_primo, mode:PICK
+2026-05-27 22:44:54, MOVE, v:1, k:ed@eh_primo, mode:BACK
+2026-05-27 22:45:08, SELF, v:1, k:ed@eh_primo, self:1, rate:100, study:15
+2026-05-27 22:45:20, MOVE, v:1, k:ed@labirinto, mode:PICK
+2026-05-27 22:45:21, EXEC, v:1, k:ed@labirinto, mode:FULL, rate:100
+2026-05-27 22:45:22, MOVE, v:1, k:ed@labirinto, mode:BACK
+2026-05-27 22:45:33, SELF, v:1, k:ed@labirinto, self:1, rate:100, study:45
+2026-05-27 22:46:03, MOVE, v:1, k:ed@mdc, mode:PICK
+2026-05-27 22:46:03, MOVE, v:1, k:ed@mdc, mode:BACK
+2026-05-27 22:46:06, MOVE, v:1, k:ed@resto, mode:PICK
+2026-05-27 22:46:07, EXEC, v:1, k:ed@resto, mode:FULL, rate:100
+2026-05-27 22:46:07, MOVE, v:1, k:ed@resto, mode:BACK
+2026-05-27 22:46:30, MOVE, v:1, k:ed@resto, mode:PICK
+2026-05-27 22:46:31, MOVE, v:1, k:ed@resto, mode:BACK
+2026-05-27 22:46:59, SELF, v:1, k:ed@resto, self:1, rate:100, study:92
+2026-05-27 22:47:16, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-05-27 22:47:17, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0
+2026-05-27 22:48:18, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:96
+2026-05-27 22:50:15, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:93
+2026-05-27 22:48:38, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-27 22:57:20, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:111
+2026-05-27 22:57:18, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-27 22:58:22, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:111
+2026-05-27 22:58:42, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:111
+2026-05-27 22:58:57, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:111
+2026-05-27 23:02:22, MOVE, v:1, k:ed@setbuild, mode:BACK
+2026-05-27 23:02:24, MOVE, v:1, k:ed@vetbuild, mode:PICK
+2026-05-27 23:02:55, MOVE, v:1, k:ed@vetbuild, mode:BACK
+2026-05-27 23:02:56, MOVE, v:1, k:ed@setbuild, mode:PICK
+2026-05-27 23:02:22, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-27 23:04:30, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:126
+2026-05-27 23:04:37, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:0, size:126
+2026-05-27 23:07:02, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-27 23:12:43, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-27 23:14:42, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-27 23:18:19, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-27 23:26:35, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:33, size:142
+2026-05-27 23:26:27, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-27 23:32:52, MOVE, v:1, k:ed@setbuild, mode:EDIT
+2026-05-27 23:33:06, EXEC, v:1, k:ed@setbuild, mode:FULL, rate:33, size:157

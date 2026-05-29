@@ -124,3 +124,8 @@
 2026-05-12 19:03:02, EXEC, v:1, k:ed@vetequals, mode:FULL, rate:100, size:60
 2026-05-12 19:03:11, MOVE, v:1, k:ed@vetequals, mode:BACK
 2026-05-12 19:03:35, SELF, v:1, k:ed@vetequals, self:1, rate:100, study:30
+2026-05-12 19:06:16, MOVE, v:1, k:ed@fib1, mode:DOWN
+2026-05-12 19:06:20, MOVE, v:1, k:ed@fib1, mode:PICK
+2026-05-12 19:07:15, MOVE, v:1, k:ed@fib1, mode:BACK
+2026-05-12 19:20:04, MOVE, v:1, k:ed@ilhas, mode:DOWN
+2026-05-12 19:36:53, MOVE, v:1, k:ed@labirinto, mode:PICK
