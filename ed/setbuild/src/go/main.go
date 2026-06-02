@@ -2,7 +2,8 @@ package main
 
 import (
 	"bufio"
-	"errors"
+
+	// "errors"
 	"fmt"
 	"os"
 	"strconv"
@@ -28,7 +29,7 @@ func (s *Set) binarySearch(value int) int {
 	right := s.size - 1
 
 	for left < right {
-	mid := (right - left) / 2
+	mid := (right + left) / 2
 		if s.data[mid] == value {
 			return mid
 		} else if s.data[mid] < value {
@@ -80,17 +81,19 @@ func (s *Set) Insert(value int) {
     s.size++
 }
 
-func (s *Set) Erase(value int) error {
-	if index>s.size {
-		return errors.New("value not found")
+func (s *Set) Erase(value int) bool {
+	index := s.binarySearch(value)
+	if index==-1 {
+		fmt.Println("value not found")
+		return false
 	}
-
-	for i := index; i<s.size; i++ {
+	
+	for i := index; i<s.size-1; i++ {
 		s.data[i] = 0
 		s.data[i], s.data[i+1] = s.data[i+1], s.data[i]
 	}
-
-	return nil 
+	s.size--
+	return true
 }
 
 func (s *Set) Show() string {
@@ -98,6 +101,10 @@ func (s *Set) Show() string {
 		return "[]"
 	}
 	return fmt.Sprintf("[%s]", Join(s.data[:s.size], ", "))
+}
+
+func (s *Set) Contains(value int) bool {
+	return s.binarySearch(value)!=-1
 }
 
 func Join(slice []int, sep string) string {
@@ -148,7 +155,8 @@ func main() {
 			value, _ := strconv.Atoi(parts[1])
 			v.Erase(value)
 		case "contains":
-			// value, _ := strconv.Atoi(parts[1])
+			value, _ := strconv.Atoi(parts[1])
+			fmt.Println(v.Contains(value))
 		case "clear":
 		default:
 			fmt.Println("fail: comando invalido")

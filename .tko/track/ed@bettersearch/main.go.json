@@ -2,8 +2,68 @@
     "patches": [
         {
             "label": "2026-05-19_16-30-10",
-            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc BetterSearch(slice []int, value int) (bool, int) {\n\t_, _ = slice, value\n\treturn false, 0\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\tslice := []int{}\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tfound, result := BetterSearch(slice, value)\n\tif found {\n\t\tfmt.Println(\"V\", result)\n\t} else {\n\t\tfmt.Println(\"F\", result)\n\t}\n}\n",
+            "content": "@@ -120,19 +120,16 @@\n int) %7B%0A%09\n-// \n _, _ = s\n@@ -145,11 +145,8 @@\n ue%0A%09\n-// \n retu\n@@ -161,242 +161,8 @@\n , 0%0A\n-%09left := 0%0A%09right := len(slice)%0A%0A%09for left %3C right %7B%0A%09mid := (right + left) / 2%0A%09%09if slice%5Bmid%5D == value %7B%0A%09%09%09return true, mid%0A%09%09%7D else if slice%5Bmid%5D %3C value %7B%0A%09%09%09left = mid + 1%0A%09%09%7D else %7B%0A%09%09%09right = mid - 1%0A%09%09%7D%0A%09%7D%0A%0A%09return false, -1%0A\n %7D%0A%0Af\n",
             "lines": "33"
+        },
+        {
+            "label": "2026-06-01_16-29-47",
+            "content": "@@ -199,47 +199,8 @@\n ce)%0A\n-%09%0A%09if right==0 %7B%0A%09%09return false, 0%0A%09%7D%0A%0A\n %0A%09fo\n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-06-01_16-31-14",
+            "content": "@@ -195,16 +195,17 @@\n (slice)%0A\n+%09\n %0A%09if rig\n@@ -238,23 +238,8 @@\n %09%7D%0A%0A\n-%09var index int%0A\n %0A%09fo\n@@ -384,23 +384,8 @@\n + 1%0A\n-%09%09%09index = mid%0A\n %09%09%7D \n@@ -414,27 +414,8 @@\n - 1%0A\n-%09%09%09index = mid + 1%0A\n %09%09%7D%0A\n@@ -437,13 +437,10 @@\n se, \n-index\n+-1\n %0A%7D%0A%0A\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-06-01_16-34-03",
+            "content": "@@ -408,20 +408,16 @@\n ex = mid\n- + 1\n %0A%09%09%7D els\n@@ -449,24 +449,28 @@\n %09index = mid\n+ + 1\n %0A%09%09%7D%0A%09%7D%0A%0A%09re\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-06-01_16-34-21",
+            "content": "@@ -375,29 +375,28 @@\n  value %7B%0A%09%09%09\n-index\n+left\n  = mid + 1%0A%09\n@@ -393,28 +393,29 @@\n  mid + 1%0A%09%09%09\n-left\n+index\n  = mid + 1%0A%09\n@@ -431,38 +431,38 @@\n %0A%09%09%09\n-index\n+right\n  = mid\n-%0A%09%09%09right\n+ - 1%0A%09%09%09index\n  = mid\n- - 1\n %0A%09%09%7D\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-06-01_16-41-17",
+            "content": "@@ -386,24 +386,28 @@\n %09index = mid\n+ + 1\n %0A%09%09%09left = m\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-06-01_16-42-26",
+            "content": "@@ -390,20 +390,16 @@\n ex = mid\n- + 1\n %0A%09%09%09left\n@@ -428,83 +428,18 @@\n %09%09%09i\n-f slice%5Bmid%5D %3E value %7B%0A%09%09%09%09index = mid - 1%0A%09%09%09%7D else %7B%0A%09%09%09%09index = mid%0A%09%09%09%7D\n+ndex = mid\n %0A%09%09%09\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-06-01_16-45-38",
+            "content": "@@ -260,17 +260,16 @@\n r left %3C\n-=\n  right %7B\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-06-01_16-46-17",
+            "content": "@@ -260,16 +260,17 @@\n r left %3C\n+=\n  right %7B\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-06-01_16-46-44",
+            "content": "@@ -233,16 +233,32 @@\n , 0%0A%09%7D%0A%0A\n+%09var index int%0A%0A\n %09for lef\n@@ -376,16 +376,35 @@\n value %7B%0A\n+%09%09%09index = mid + 1%0A\n %09%09%09left \n@@ -455,28 +455,29 @@\n e %7B%0A%09%09%09%09\n-left\n+index\n  = mid \n-+\n+-\n  1%0A%09%09%09%7D \n@@ -487,21 +487,21 @@\n e %7B%0A%09%09%09%09\n-right\n+index\n  = mid%0A%09\n@@ -504,16 +504,35 @@\n id%0A%09%09%09%7D%0A\n+%09%09%09right = mid - 1%0A\n %09%09%7D%0A%09%7D%0A%0A\n@@ -546,20 +546,21 @@\n  false, \n-left\n+index\n %0A%7D%0A%0Afunc\n",
+            "lines": "60"
+        },
+        {
+            "label": "2026-06-01_20-43-53",
+            "content": "@@ -253,17 +253,16 @@\n right %7B%0A\n-%09\n %09mid := \n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-06-01_20-44-25",
+            "content": "@@ -386,24 +386,83 @@\n %0A%09%09%7D else %7B%0A\n+%09%09%09if slice%5Bmid%5D %3E value %7B%0A%09%09%09%09left = mid + 1%0A%09%09%09%7D else %7B%0A%09\n %09%09%09right = m\n@@ -468,15 +468,21 @@\n mid%0A\n+%09%09%09%7D%0A\n %09%09%7D%0A%09%7D%0A\n+%0A\n %09ret\n",
+            "lines": "56"
+        },
+        {
+            "label": "2026-06-01_20-47-18",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n\t\"strconv\"\n\t\"strings\"\n)\n\nfunc BetterSearch(slice []int, value int) (bool, int) {\n\t// _, _ = slice, value\n\t// return false, 0\n\tleft := 0\n\tright := len(slice)\n\n\tif right==0 {\n\t\treturn false, 0\n\t}\n\n\tfor left < right {\n\t\tmid := (right + left) / 2\n\t\tif slice[mid] == value {\n\t\t\treturn true, mid\n\t\t} else if slice[mid] < value {\n\t\t\tleft = mid + 1\n\t\t} else {\n\t\t\tright = mid\n\t\t}\n\t}\n\treturn false, left\n}\n\nfunc main() {\n\tscanner := bufio.NewScanner(os.Stdin)\n\tscanner.Scan()\n\tparts := strings.Split(scanner.Text(), \" \")\n\tslice := []int{}\n\tfor _, elem := range parts[1 : len(parts)-1] {\n\t\tvalue, _ := strconv.Atoi(elem)\n\t\tslice = append(slice, value)\n\t}\n\tscanner.Scan()\n\tvalue, _ := strconv.Atoi(scanner.Text())\n\tfound, result := BetterSearch(slice, value)\n\tif found {\n\t\tfmt.Println(\"V\", result)\n\t} else {\n\t\tfmt.Println(\"F\", result)\n\t}\n}\n",
+            "lines": "51"
         }
     ]
 }
