@@ -1,0 +1,64 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-08_20-01-01",
+            "content": "@@ -169,19 +169,16 @@\n uilder%0A%09\n-// \n for node\n@@ -225,19 +225,16 @@\n next %7B%0A%09\n-// \n %09if node\n@@ -246,19 +246,16 @@\n word %7B%0A%09\n-// \n %09%09result\n@@ -278,18 +278,12 @@\n %22)%0A%09\n-// \n %09%7D%0A%09\n-// \n %09res\n@@ -331,19 +331,16 @@\n lue))%0A%0A%09\n-// \n %09if node\n@@ -353,27 +353,24 @@\n != nil %7B%0A   \n- //\n          res\n@@ -397,19 +397,16 @@\n %0A   \n- //\n      %7D%0A%09\n // %7D\n@@ -401,19 +401,16 @@\n      %7D%0A%09\n-// \n %7D%0A%0A%09retu\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-08_20-01-21",
+            "content": "@@ -169,16 +169,19 @@\n uilder%0A%09\n+// \n for node\n@@ -224,18 +224,19 @@\n ode.\n-N\n+n\n ext\n-()\n  %7B%0A%09\n+// \n %09if \n@@ -252,16 +252,19 @@\n word %7B%0A%09\n+// \n %09%09result\n@@ -283,20 +283,26 @@\n (%22%3E %22)%0A%09\n+// \n %09%7D%0A%09\n+// \n %09result.\n@@ -346,16 +346,19 @@\n lue))%0A%0A%09\n+// \n %09if node\n@@ -376,24 +376,26 @@\n l %7B%0A    \n+//\n         \n result.W\n@@ -386,16 +386,17 @@\n         \n+ \n result.W\n@@ -418,16 +418,19 @@\n %0A   \n+ //\n      %7D%0A%09\n %7D%0A%0A%09\n@@ -425,16 +425,19 @@\n      %7D%0A%09\n+// \n %7D%0A%0A%09retu\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-08_20-01-49",
+            "content": "@@ -396,17 +396,8 @@\n  %22)%0A\n-%09%09%09break%0A\n     \n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-08_20-04-34",
+            "content": "@@ -346,18 +346,16 @@\n ode.Next\n-()\n  != nil \n@@ -392,16 +392,25 @@\n ng(%22 %22)%0A\n+%09%09%09break%0A\n         \n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-06-08_20-05-52",
+            "content": "@@ -346,16 +346,18 @@\n ode.Next\n+()\n  != nil \n@@ -535,17 +535,17 @@\n %0A%09if it.\n-n\n+N\n ext != n\n@@ -553,17 +553,16 @@\n l %7B%0A    \n-%09\n return i\n@@ -567,18 +567,17 @@\n  it.\n-next%0A%09%7D%09%0A%09\n+Next()%0A%7D%0A\n retu\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-08_20-09-41",
+            "content": "@@ -200,23 +200,19 @@\n node != \n-l.End()\n+nil\n ; node =\n@@ -346,23 +346,19 @@\n ode.\n-n\n+N\n ext != \n-l.End()\n+nil\n  %7B%0A \n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-08_20-13-30",
+            "content": "@@ -234,61 +234,8 @@\n ) %7B%0A\n-%09%09result.WriteString(fmt.Sprintf(%22%25d%22, node.Value))%0A%0A\n %09%09if\n@@ -285,16 +285,66 @@\n )%0A%09%09%7D%0A%09%09\n+result.WriteString(fmt.Sprintf(%22%25d%22, node.Value))%0A\n %0A%09%09if no\n",
+            "lines": "51"
+        },
+        {
+            "label": "2026-06-08_20-14-08",
+            "content": "@@ -328,16 +328,17 @@\n tring(%22%3E\n+ \n %22)%0A%09%09%7D%0A%09\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-06-08_20-14-18",
+            "content": "@@ -172,34 +172,8 @@\n der%0A\n-%09result.WriteString(%22%5B %22)%0A\n %09for\n@@ -419,33 +419,8 @@\n %0A%09%7D%0A\n-%09result.WriteString(%22 %5D%22)\n %0A%09re\n",
+            "lines": "52"
+        },
+        {
+            "label": "2026-06-08_20-15-27",
+            "content": "@@ -714,19 +714,16 @@\n hosen)%0A%09\n-// \n fmt.Prin\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-06-08_20-15-58",
+            "content": "@@ -598,31 +598,27 @@\n  it.next != \n-l.End()\n+nil\n  %7B%0A    %09retu\n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-06-08_20-24-57",
+            "content": "package main\n\nimport (\n\t\"fmt\"\n\t\"strings\"\n)\n\n// mostra a lista com o elemento sword destacado\nfunc ToStr(l *DList[int], sword *DNode[int]) string {\n\tvar result strings.Builder\n\tresult.WriteString(\"[ \")\n\tfor node := l.Front(); node != l.End(); node = node.Next() {\n\t\tresult.WriteString(fmt.Sprintf(\"%d\", node.Value))\n\n\t\tif node == sword {\n\t\t\tresult.WriteString(\">\")\n\t\t}\n\t\t\n\t\tif node.next != l.End() {\n            result.WriteString(\" \")\n        }\n\t}\n\tresult.WriteString(\" ]\")\n\treturn result.String()\n}\n\n// move para frente na lista circular\nfunc Next(l *DList[int], it *DNode[int]) *DNode[int] {\n\tif it.next != l.End() {\n    \treturn it.next\n\t}\t\n\treturn l.Front()\n}\n\nfunc main() {\n\tvar qtd, chosen int\n\tfmt.Scan(&qtd, &chosen)\n\t// fmt.Println(qtd, chosen)\n\tl := NewDList[int]()\n\tfor i := 1; i <= qtd; i++ {\n\t\tl.PushBack(i)\n\t}\n\tsword := l.Front()\n\tfor range chosen - 1 {\n\t\tsword = Next(l, sword)\n\t}\n\tfor range qtd - 1 {\n\t\tfmt.Println(ToStr(l, sword))\n\t\tl.Erase(Next(l, sword))\n\t\tsword = Next(l, sword)\n\t}\n\tfmt.Println(ToStr(l, sword))\n}\n",
+            "lines": "53"
+        }
+    ]
+}
