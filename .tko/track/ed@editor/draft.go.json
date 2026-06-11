@@ -1,0 +1,129 @@
+{
+    "patches": [
+        {
+            "label": "2026-06-09_18-23-32",
+            "content": "@@ -10,147 +10,34 @@\n ain%0A\n-%0A\n import \n-(%0A%09%22bufio%22%0A%09%22fmt%22%0A%09%22os%22%0A)%0A%0Afunc main() %7B%0A    leitor := bufio.NewScanner(os.Stdin)%0A    linha := leitor.Scan()%0A    fmt.Println(linha)\n+%22fmt%22%0Afunc main() %7B\n %0A   \n",
+            "lines": "5"
+        },
+        {
+            "label": "2026-06-09_18-27-22",
+            "content": "@@ -120,12 +120,12 @@\n tor.\n-Text\n+Scan\n ()%0A \n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-06-09_18-27-35",
+            "content": "@@ -100,26 +100,8 @@\n in)%0A\n-    leitor.Scan()%0A\n     \n",
+            "lines": "14"
+        },
+        {
+            "label": "2026-06-09_18-29-27",
+            "content": "@@ -168,120 +168,8 @@\n ha)%0A\n-    // pointer := 0%0A    for _, c := range linha %7B%0A        if c=='R' %7B%0A            fmt.Println()%0A        %7D%0A    %7D%0A\n     \n",
+            "lines": "15"
+        },
+        {
+            "label": "2026-06-09_18-34-45",
+            "content": "@@ -274,35 +274,8 @@\n   %7D%0A\n-        fmt.Print(%22%25s%22, c)%0A\n     \n",
+            "lines": "21"
+        },
+        {
+            "label": "2026-06-09_18-35-03",
+            "content": "@@ -290,17 +290,17 @@\n Print(%22%25\n-r\n+s\n %22, c)%0A  \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-09_18-35-09",
+            "content": "@@ -294,21 +294,13 @@\n t(%22%25\n-s%22, string(c)\n+r%22, c\n )%0A  \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-09_18-36-14",
+            "content": "@@ -262,10 +262,8 @@\n tln(\n-%22%22\n )%0A  \n@@ -287,17 +287,16 @@\n mt.Print\n-f\n (%22%25s%22, s\n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-09_18-37-22",
+            "content": "@@ -275,20 +275,9 @@\n    %7D\n- else %7B%0A    \n+%0A\n     \n@@ -308,26 +308,16 @@\n ing(c))%0A\n-        %7D%0A\n     %7D%0A  \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-09_18-37-40",
+            "content": "@@ -338,19 +338,16 @@\n    %7D%0A   \n- //\n  fmt.Pri\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-06-09_18-38-02",
+            "content": "@@ -141,16 +141,39 @@\n .Text()%0A\n+    fmt.Println(linha)%0A\n     // p\n",
+            "lines": "23"
+        },
+        {
+            "label": "2026-06-09_18-38-12",
+            "content": "@@ -172,408 +172,95 @@\n  for\n-matado := %5B%5Drune(linha)%0A    pointer := 0%0A    for _, c := range formatado %7B%0A        if c=='%3C' %7B%0A            pointer--    %0A        %7D else if c=='%3E' %7B%0A            pointer++%0A            continue%0A        %7D%0A    %7D%0A%0A    //imprimir com enter%0A    for i, c := range linha %7B%0A        if c=='R' %7B%0A            fmt.Println(%22%22)%0A        %7D else %7B%0A            if i==pointer %7B%0A                fmt.Print(%22%7C%22)%0A            %7D\n+ _, c := range linha %7B%0A        if c=='R' %7B%0A            fmt.Println(%22%22)%0A        %7D else %7B\n %0A   \n",
+            "lines": "22"
+        },
+        {
+            "label": "2026-06-09_18-54-24",
+            "content": "@@ -350,27 +350,30 @@\n     \n-%7D%0A        pointer++\n+    continue%0A        %7D\n %0A   \n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-06-09_18-54-46",
+            "content": "@@ -288,29 +288,8 @@\n er--\n-%0A            continue\n     \n",
+            "lines": "37"
+        },
+        {
+            "label": "2026-06-09_18-56-30",
+            "content": "@@ -641,75 +641,8 @@\n   %7D%0A\n-        if i==len(formatado) %7B%0A            fmt.Println()%0A        %7D%0A\n     \n",
+            "lines": "38"
+        },
+        {
+            "label": "2026-06-09_18-57-27",
+            "content": "@@ -669,10 +669,8 @@\n ado)\n--1\n  %7B%0A \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-06-09_18-57-38",
+            "content": "@@ -590,75 +590,8 @@\n    %7D\n- else if c=='%3C' %7C%7C c=='%3E' %7B%0A                continue%0A            %7D \n %0A   \n",
+            "lines": "41"
+        },
+        {
+            "label": "2026-06-09_18-58-44",
+            "content": "@@ -783,33 +783,8 @@\n   %7D%0A\n-    fmt.Println(pointer)%0A\n     \n",
+            "lines": "43"
+        },
+        {
+            "label": "2026-06-09_18-59-12",
+            "content": "@@ -589,52 +589,45 @@\n     \n-    fmt.Printf(%22%25s%22, string(c))%0A    \n+%7D else if c=='%3C' %7C%7C c=='%3E' %7B%0A\n         \n %7D%0A  \n@@ -618,34 +618,32 @@\n ' %7B%0A        \n-%7D%0A\n         \n     %0A       \n@@ -626,29 +626,37 @@\n             \n+continue%0A\n     \n-%0A\n         %7D%0A%0A \n@@ -648,25 +648,25 @@\n            %7D\n-%0A\n+ \n %0A        %0A  \n@@ -666,46 +666,50 @@\n     \n-%0A\n     \n-    if i==len(formatado)-1 %7B%0A\n+fmt.Printf(%22%25s%22, string(c))%0A    \n     \n+%7D%0A\n     \n@@ -719,16 +719,10 @@\n  if \n-pointer%3E\n+i=\n =len\n@@ -736,54 +736,12 @@\n ado)\n+-1\n  %7B\n-%0A               fmt.Print(%22%7C%22)%0A            %7D\n %0A   \n",
+            "lines": "44"
+        },
+        {
+            "label": "2026-06-09_19-01-23",
+            "content": "@@ -581,19 +581,8 @@\n     \n-        %7D %0A\n     \n@@ -617,33 +617,70 @@\n ing(c))%0A        \n-%7D\n+    %7D%0A            %0A        %7D%0A%0A        \n %0A        if i==l\n@@ -738,17 +738,16 @@\n tado) %7B%0A\n- \n         \n",
+            "lines": "48"
+        },
+        {
+            "label": "2026-06-09_19-02-00",
+            "content": "@@ -501,65 +501,8 @@\n %22%22)%0A\n-        %7D else if c=='%3C' %7C%7C c=='%3E'%7B%0A            continue%0A\n     \n",
+            "lines": "45"
+        },
+        {
+            "label": "2026-06-09_19-02-56",
+            "content": "@@ -855,27 +855,24 @@\n  %7D%0A    %7D%0A   \n- //\n  fmt.Println\n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-06-09_19-03-31",
+            "content": "@@ -209,33 +209,33 @@\n er := 0%0A    for \n-i\n+_\n , c := range for\n@@ -260,25 +260,16 @@\n f c=='%3C'\n-%7C%7C c=='%3E'\n  %7B%0A     \n@@ -279,204 +279,50 @@\n     \n-if c=='%3C' %7B%0A                pointer--%0A            %7D else %7B%0A                pointer++%0A            %7D%0A            formatado = append(formatado%5B:i%5D, formatado%5Bi+1:%5D)%0A            // continue%0A        //\n+pointer--%0A            continue    %0A       \n  %7D e\n@@ -344,19 +344,16 @@\n %0A       \n- //\n      poi\n@@ -363,21 +363,8 @@\n r++%0A\n-        // %7D%0A\n     \n",
+            "lines": "47"
+        },
+        {
+            "label": "2026-06-09_19-12-27",
+            "content": "@@ -448,11 +448,8 @@\n +1:%5D\n-...\n )%0A  \n",
+            "lines": "53"
+        },
+        {
+            "label": "2026-06-09_19-12-56",
+            "content": "package main\n\nimport (\n\t\"bufio\"\n\t\"fmt\"\n\t\"os\"\n)\n\nfunc main() {\n    leitor := bufio.NewScanner(os.Stdin)\n    leitor.Scan()\n    linha := leitor.Text()\n    // pointer := 0\n    formatado := []rune(linha)\n    pointer := 0\n    for i, c := range formatado {\n        if c=='<'|| c=='>' {\n            if c=='<' {\n                pointer--\n            } else {\n                pointer++\n            }\n            formatado = append(formatado[:i], formatado[i+1:]...)\n            // continue\n        // } else if c=='>' {\n        //     pointer++\n        // }\n        }\n        pointer++\n    }\n\n    //imprimir com enter\n    for i, c := range linha {\n        if c=='R' {\n            fmt.Println(\"\")\n        } else if c=='<' || c=='>'{\n            continue\n        } else {\n            if i==pointer {\n                fmt.Print(\"|\")\n            } \n            fmt.Printf(\"%s\", string(c))\n        }\n        if i==len(formatado)-1 {\n            if pointer>=len(formatado) {\n                fmt.Print(\"|\")\n            }\n            fmt.Println()\n        }\n    }\n    // fmt.Println(pointer)\n    // fmt.Println(\"Hello, World!\")\n}\n",
+            "lines": "53"
+        }
+    ]
+}

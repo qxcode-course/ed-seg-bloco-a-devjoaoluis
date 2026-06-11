@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"errors"
 	"fmt"
 	"os"
 	"strconv"
@@ -39,7 +40,7 @@ func (m *MultiSet) search(value int) (bool, int) {
 	left := 0
 	right := m.size
 
-	for left < right {
+	for left <= right {
 		mid := (left+right) / 2
 		if m.data[mid]==value {
 			return true, mid
@@ -86,6 +87,16 @@ func (m *MultiSet) insert(value int, index int) error {
 }
 
 func (m *MultiSet) Erase(value int) error {
+	ok, index := m.search(value)
+	if !ok {
+		fmt.Println("value not found")
+		return errors.New("value not found")
+	}
+	m.data[index] = 0
+	for i := index; i < m.size; i++ {
+		m.data[i], m.data[i+1] = m.data[i+1], m.data[i]
+	}
+	m.size--
 	return nil
 }
 
@@ -105,7 +116,16 @@ func (m *MultiSet) Count(value int) int {
 }
 
 func (m *MultiSet) Unique() int {
-	return -1
+	if m.size==0 {
+		return 0
+	}
+	count := 1
+	for i := range m.size-1 {
+		if m.data[i]!=m.data[i+1] {
+			count++
+		}
+	}
+	return count
 }
 
 func (m *MultiSet) Clear() {
@@ -159,7 +179,8 @@ func main() {
 		case "show":
 			fmt.Println(ms.String())
 		case "erase":
-			// value, _ := strconv.Atoi(args[1])
+			value, _ := strconv.Atoi(args[1])
+			ms.Erase(value)
 		case "contains":
 			value, _ := strconv.Atoi(args[1])
 			fmt.Println(ms.Contains(value))
@@ -167,6 +188,7 @@ func main() {
 			value, _ := strconv.Atoi(args[1])
 			fmt.Println(ms.Count(value))
 		case "unique":
+			fmt.Println(ms.Unique())
 		case "clear":
 			ms.Clear()
 		default:
