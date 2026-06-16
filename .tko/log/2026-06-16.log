@@ -1,0 +1,5 @@
+2026-06-16 00:03:48, EXEC, v:1, k:ed@pilha, mode:FULL, rate:0, size:80
+2026-06-16 00:03:50, MOVE, v:1, k:ed@pilha, mode:BACK
+2026-06-16 00:03:51, MOVE, v:1, k:ed@pilha, mode:PICK
+2026-06-16 00:05:26, MOVE, v:1, k:ed@pilha, mode:BACK
+2026-06-16 00:05:29, MOVE, v:1, k:ed@pilha, mode:PICK
